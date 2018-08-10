@@ -1,1 +1,3 @@
-cmake-buid-debug
+/cmake-buid-debug/
+/.idea/
+/.idea/workspace.xml

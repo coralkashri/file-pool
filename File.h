@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <mutex>
+#include <fstream>
 
 /**
  * >> if file_mode is OPEN_IN_ACTION:
@@ -21,6 +22,12 @@ enum class ReadWriteMode {
     DONE
 };
 
+enum class FileAction {
+    READ,
+    WRITE,
+    NONE
+};
+
 enum class FileMode {
     ALWAYS_OPEN,
     OPEN_IN_ACTION
@@ -29,14 +36,19 @@ enum class FileMode {
 class File {
 private:
     std::string         name;
-    FileMode            file_mode;
-    ReadWriteMode       read_write_mode;
+    FileMode            file_mode = FileMode::OPEN_IN_ACTION;
+    ReadWriteMode       read_write_mode = ReadWriteMode::DONE;
+    FileAction          file_action = FileAction::NONE;
     std::mutex          read_write_mutex;
+    std::fstream        file_ptr;
 
-    void change_rwm(ReadWriteMode new_rwm); // Change read/write mode
+    void open(std::ios_base::openmode mode_flags, const FileAction &new_file_action);
+    void change_rwm(const ReadWriteMode &new_rwm); // Change read mode
 
 public:
     File(const std::string &file_path);
+    template<typename T> File& read(T &val, const ReadWriteMode &read_mode);
+    template<typename T> File& write(const T &val, const ReadWriteMode &write_mode, std::ios_base::openmode mode_flags = std::ios_base::out | std::ios_base::app);
 };
 
 

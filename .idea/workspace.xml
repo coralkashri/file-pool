@@ -12,10 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bcf10ec0-df2e-4371-879f-a2e8a9fc2ffd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CodeTests/FileTestNotVector.cpp" afterPath="$PROJECT_DIR$/CodeTests/FileTestNotVector.cpp" />
-      <change beforePath="$PROJECT_DIR$/CodeTests/FileTestOpertorsNotVectors.cpp" afterPath="$PROJECT_DIR$/CodeTests/FileTestOpertorsNotVectors.cpp" />
-      <change beforePath="$PROJECT_DIR$/CodeTests/FilesManagerTest.cpp" afterPath="$PROJECT_DIR$/CodeTests/FilesManagerTest.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +26,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FileTestVector.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FileTestVector.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CodeTests/FileTestVector.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -36,6 +34,16 @@
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,7 +115,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Test/test_file.bin" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/DesignText.cpp" />
@@ -124,6 +131,7 @@
         <option value="$PROJECT_DIR$/CodeTests/FileTestNotVector.cpp" />
         <option value="$PROJECT_DIR$/CodeTests/FilesManagerTest.cpp" />
         <option value="$PROJECT_DIR$/CodeTests/FileTestVector.cpp" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -230,7 +238,7 @@
       <option name="presentableId" value="Default" />
       <updated>1533941530696</updated>
       <workItem from="1533941532397" duration="11377000" />
-      <workItem from="1533993367830" duration="23449000" />
+      <workItem from="1533993367830" duration="23511000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1533941668116</created>
@@ -316,11 +324,18 @@
       <option name="project" value="LOCAL" />
       <updated>1534022583169</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Tests upgraded.">
+      <created>1534023522620</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1534023522620</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34826000" />
+    <option name="totallyTimeSpent" value="34888000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="1013" width="1857" height="1092" extended-state="6" />
@@ -338,7 +353,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -387,7 +402,8 @@
     <MESSAGE value="File class significant progress." />
     <MESSAGE value="File class tested with/without vectors + DesignText namespace added." />
     <MESSAGE value="Applied operators overloading to File.h &amp; File.cpp.&#10;Applied &quot;using rw_t&quot; in File.h.&#10;Remove &quot;using rwv_t&quot; from File.h.&#10;Fixed bug - arrays as read buffer from file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Applied operators overloading to File.h &amp; File.cpp.&#10;Applied &quot;using rw_t&quot; in File.h.&#10;Remove &quot;using rwv_t&quot; from File.h.&#10;Fixed bug - arrays as read buffer from file." />
+    <MESSAGE value="Tests upgraded." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tests upgraded." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -575,14 +591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test/test_file.bin">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -699,16 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CodeTests/FileTestNotVector.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/File.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -753,6 +751,24 @@
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeTests/FileTestNotVector.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>

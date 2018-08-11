@@ -12,7 +12,7 @@
 /**
  * >> if file_mode is OPEN_IN_ACTION:
  * SINGLE_AND_DONE - read/write single time, and then close the file.
- * SINGLE_AND_MORE - read/write single time, but don't close the file yet. wait for SINGLE_AND_DONE mode.
+ * SINGLE_AND_MORE - read/write single time, but don't close the file yet. After single read/write the mode will automatic update to SINGLE_AND_DONE mode.
  * MULTIPLE - close the file only in programmer order, until then the file will be remain open.
  */
 enum class ReadWriteMode {
@@ -43,13 +43,35 @@ private:
     std::fstream        file_ptr;
 
     void open(std::ios_base::openmode mode_flags, const FileAction &new_file_action);
-    void change_rwm(const ReadWriteMode &new_rwm); // Change read mode
-
+    void update_rwm(); // Change read mode
+    void close(bool automatic);
 public:
     File(const std::string &file_path);
-    template<typename T> File& read(T &val, const ReadWriteMode &read_mode);
-    template<typename T> File& write(const T &val, const ReadWriteMode &write_mode, std::ios_base::openmode mode_flags = std::ios_base::out | std::ios_base::app);
-};
+    ~File();
+    void close();
+    void init_read_write_mode(const ReadWriteMode &read_mode);
 
+    template<typename T>
+    File& read(T &val, const size_t data_size, std::ios_base::openmode mode_flags = std::ios_base::in) {
+        open(mode_flags, FileAction::READ);
+        std::lock_guard<std::mutex> guard(read_write_mutex);
+
+        file_ptr.read((char*)(&val), data_size);
+
+        update_rwm();
+        return *this;
+    }
+
+    template<typename T>
+    File& write(const T &val, const size_t data_size, std::ios_base::openmode mode_flags = std::ios_base::out | std::ios_base::app) {
+        open(mode_flags, FileAction::WRITE);
+        std::lock_guard<std::mutex> guard(read_write_mutex);
+
+        file_ptr.write((char*)(&val), data_size);
+
+        update_rwm();
+        return *this;
+    }
+};
 
 #endif //FILESAPI_FILE_H

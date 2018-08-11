@@ -8,5 +8,6 @@ CMakeFiles/filesAPI.dir/FilesManager.cpp.o: ../File.h
 CMakeFiles/filesAPI.dir/FilesManager.cpp.o: ../FilesManager.cpp
 CMakeFiles/filesAPI.dir/FilesManager.cpp.o: ../FilesManager.h
 
+CMakeFiles/filesAPI.dir/main.cpp.o: ../File.h
 CMakeFiles/filesAPI.dir/main.cpp.o: ../main.cpp
 

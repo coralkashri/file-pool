@@ -5,14 +5,21 @@
 #include "File.h"
 
 File::File(const std::string &file_path) {
+    name = file_path;
+}
 
+File::~File() {
+    std::lock_guard<std::mutex> guard(read_write_mutex);
+    close();
 }
 
 void File::open(std::ios_base::openmode mode_flags, const FileAction &new_file_action) {
     std::lock_guard<std::mutex> guard(read_write_mutex);
     if (file_action != new_file_action) {
         file_ptr.close();
-        std::cerr << "Pay attention: file mission replaced by another one." << std::endl;
+        if (file_action != FileAction::NONE) {
+            std::cerr << "Pay attention: file mission replaced by another one." << std::endl;
+        }
     }
     file_action = new_file_action;
 
@@ -25,26 +32,36 @@ void File::open(std::ios_base::openmode mode_flags, const FileAction &new_file_a
     }
 }
 
-void File::change_rwm(const ReadWriteMode &new_rwm) {
-    std::lock_guard<std::mutex> guard(read_write_mutex);
+void File::close(bool automatic) {
+    if (!automatic || file_mode == FileMode::OPEN_IN_ACTION) {
+        if (file_ptr.is_open()) {
+            file_ptr.close();
+            read_write_mode = ReadWriteMode::DONE;
+            file_action = FileAction::NONE;
+        }
+    }
 }
 
-template<typename T>
-File &File::read(T &val, const ReadWriteMode &read_mode) {
-    std::lock_guard<std::mutex> guard(read_write_mutex);
-    return *this;
+void File::close() {
+    close(false);
 }
 
-template<typename T>
-File &File::write(const T &val, const ReadWriteMode &write_mode, std::ios_base::openmode mode_flags) {
-    change_rwm(write_mode);
-    open(mode_flags, FileAction::WRITE);
-    std::lock_guard<std::mutex> guard(read_write_mutex);
-
-    switch (write_mode) {
+void File::update_rwm() {
+    switch (read_write_mode) {
+        case ReadWriteMode::SINGLE_AND_DONE:
+        case ReadWriteMode::DONE:
+            read_write_mode = ReadWriteMode::DONE;
+            file_action = FileAction::NONE;
+            close(true);
+            break;
+        case ReadWriteMode::SINGLE_AND_MORE:
+            read_write_mode = ReadWriteMode::SINGLE_AND_DONE;
+            break;
         case ReadWriteMode::MULTIPLE:
             break;
     }
+}
 
-    return *this;
+void File::init_read_write_mode(const ReadWriteMode &new_mode) {
+    read_write_mode = new_mode;
 }

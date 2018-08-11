@@ -14,6 +14,7 @@ int mainFilesManagerTest() {
     vector<complex<float>> rdata(wdata.size());
 
     fm.get("1").init_read_write_mode(ReadWriteMode::SINGLE_AND_DONE);
+    //fm.get("1").write(wdata.data(), wdata.size()); // Use it as complex<float> array. Possible.
     fm.get("1").write(wdata);
     fm.get("1").init_read_write_mode(ReadWriteMode::SINGLE_AND_DONE);
     fm.get("1").read(rdata);

@@ -7,19 +7,32 @@ using namespace std;
 
 int mainFileTestNotVector() {
     File f("../Test/test_file.bin");
+    size_t elements_count = 100;
 
     f.init_read_write_mode(ReadWriteMode::MULTIPLE);
-    for (size_t i = 0; i < 100; i++) {
+    for (size_t i = 0; i < elements_count; i++) {
         f.write(&i);
     }
 
-    //f.close();
-    //f.init_read_write_mode(ReadWriteMode::MULTIPLE);
+    /*f.close();
+    f.init_read_write_mode(ReadWriteMode::MULTIPLE);*/
 
-    size_t j;
-    for (size_t i = 0; i < 100; i++) {
-        f.read(&j);
-        cout << j << " ";
+    /// Option 1
+    size_t read_single;
+    for (size_t i = 0; i < elements_count / 2; i++) {
+        f.read(&read_single);
+        cout << read_single << " ";
+    }
+    cout << endl;
+
+    /*f.close();
+    f.init_read_write_mode(ReadWriteMode::MULTIPLE);*/
+
+    /// Option 2
+    size_t read_buffer[elements_count / 2];
+    f.read(read_buffer, elements_count / 2);
+    for (size_t i = 0; i < elements_count / 2; i++) {
+        cout << read_buffer[i] << " ";
     }
     cout << endl;
 

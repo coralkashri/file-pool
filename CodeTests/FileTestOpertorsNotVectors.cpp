@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int main() {
+int mainFileTestOpertorsNotVectors() {
     File f("../Test/test_file.bin");
     const size_t size = 10;
     int wdata = 0;

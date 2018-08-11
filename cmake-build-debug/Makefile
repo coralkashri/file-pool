@@ -123,6 +123,141 @@ filesAPI/fast:
 	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/build
 .PHONY : filesAPI/fast
 
+CodeTests/FileTestNotVector.o: CodeTests/FileTestNotVector.cpp.o
+
+.PHONY : CodeTests/FileTestNotVector.o
+
+# target to build an object file
+CodeTests/FileTestNotVector.cpp.o:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FileTestNotVector.cpp.o
+.PHONY : CodeTests/FileTestNotVector.cpp.o
+
+CodeTests/FileTestNotVector.i: CodeTests/FileTestNotVector.cpp.i
+
+.PHONY : CodeTests/FileTestNotVector.i
+
+# target to preprocess a source file
+CodeTests/FileTestNotVector.cpp.i:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FileTestNotVector.cpp.i
+.PHONY : CodeTests/FileTestNotVector.cpp.i
+
+CodeTests/FileTestNotVector.s: CodeTests/FileTestNotVector.cpp.s
+
+.PHONY : CodeTests/FileTestNotVector.s
+
+# target to generate assembly for a file
+CodeTests/FileTestNotVector.cpp.s:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FileTestNotVector.cpp.s
+.PHONY : CodeTests/FileTestNotVector.cpp.s
+
+CodeTests/FileTestOpertorsNotVectors.o: CodeTests/FileTestOpertorsNotVectors.cpp.o
+
+.PHONY : CodeTests/FileTestOpertorsNotVectors.o
+
+# target to build an object file
+CodeTests/FileTestOpertorsNotVectors.cpp.o:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsNotVectors.cpp.o
+.PHONY : CodeTests/FileTestOpertorsNotVectors.cpp.o
+
+CodeTests/FileTestOpertorsNotVectors.i: CodeTests/FileTestOpertorsNotVectors.cpp.i
+
+.PHONY : CodeTests/FileTestOpertorsNotVectors.i
+
+# target to preprocess a source file
+CodeTests/FileTestOpertorsNotVectors.cpp.i:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsNotVectors.cpp.i
+.PHONY : CodeTests/FileTestOpertorsNotVectors.cpp.i
+
+CodeTests/FileTestOpertorsNotVectors.s: CodeTests/FileTestOpertorsNotVectors.cpp.s
+
+.PHONY : CodeTests/FileTestOpertorsNotVectors.s
+
+# target to generate assembly for a file
+CodeTests/FileTestOpertorsNotVectors.cpp.s:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsNotVectors.cpp.s
+.PHONY : CodeTests/FileTestOpertorsNotVectors.cpp.s
+
+CodeTests/FileTestOpertorsVectors.o: CodeTests/FileTestOpertorsVectors.cpp.o
+
+.PHONY : CodeTests/FileTestOpertorsVectors.o
+
+# target to build an object file
+CodeTests/FileTestOpertorsVectors.cpp.o:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsVectors.cpp.o
+.PHONY : CodeTests/FileTestOpertorsVectors.cpp.o
+
+CodeTests/FileTestOpertorsVectors.i: CodeTests/FileTestOpertorsVectors.cpp.i
+
+.PHONY : CodeTests/FileTestOpertorsVectors.i
+
+# target to preprocess a source file
+CodeTests/FileTestOpertorsVectors.cpp.i:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsVectors.cpp.i
+.PHONY : CodeTests/FileTestOpertorsVectors.cpp.i
+
+CodeTests/FileTestOpertorsVectors.s: CodeTests/FileTestOpertorsVectors.cpp.s
+
+.PHONY : CodeTests/FileTestOpertorsVectors.s
+
+# target to generate assembly for a file
+CodeTests/FileTestOpertorsVectors.cpp.s:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsVectors.cpp.s
+.PHONY : CodeTests/FileTestOpertorsVectors.cpp.s
+
+CodeTests/FileTestVector.o: CodeTests/FileTestVector.cpp.o
+
+.PHONY : CodeTests/FileTestVector.o
+
+# target to build an object file
+CodeTests/FileTestVector.cpp.o:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FileTestVector.cpp.o
+.PHONY : CodeTests/FileTestVector.cpp.o
+
+CodeTests/FileTestVector.i: CodeTests/FileTestVector.cpp.i
+
+.PHONY : CodeTests/FileTestVector.i
+
+# target to preprocess a source file
+CodeTests/FileTestVector.cpp.i:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FileTestVector.cpp.i
+.PHONY : CodeTests/FileTestVector.cpp.i
+
+CodeTests/FileTestVector.s: CodeTests/FileTestVector.cpp.s
+
+.PHONY : CodeTests/FileTestVector.s
+
+# target to generate assembly for a file
+CodeTests/FileTestVector.cpp.s:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FileTestVector.cpp.s
+.PHONY : CodeTests/FileTestVector.cpp.s
+
+CodeTests/FilesManagerTest.o: CodeTests/FilesManagerTest.cpp.o
+
+.PHONY : CodeTests/FilesManagerTest.o
+
+# target to build an object file
+CodeTests/FilesManagerTest.cpp.o:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.o
+.PHONY : CodeTests/FilesManagerTest.cpp.o
+
+CodeTests/FilesManagerTest.i: CodeTests/FilesManagerTest.cpp.i
+
+.PHONY : CodeTests/FilesManagerTest.i
+
+# target to preprocess a source file
+CodeTests/FilesManagerTest.cpp.i:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.i
+.PHONY : CodeTests/FilesManagerTest.cpp.i
+
+CodeTests/FilesManagerTest.s: CodeTests/FilesManagerTest.cpp.s
+
+.PHONY : CodeTests/FilesManagerTest.s
+
+# target to generate assembly for a file
+CodeTests/FilesManagerTest.cpp.s:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.s
+.PHONY : CodeTests/FilesManagerTest.cpp.s
+
 DesignText.o: DesignText.cpp.o
 
 .PHONY : DesignText.o
@@ -204,33 +339,6 @@ FilesManager.cpp.s:
 	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/FilesManager.cpp.s
 .PHONY : FilesManager.cpp.s
 
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -240,6 +348,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... filesAPI"
+	@echo "... CodeTests/FileTestNotVector.o"
+	@echo "... CodeTests/FileTestNotVector.i"
+	@echo "... CodeTests/FileTestNotVector.s"
+	@echo "... CodeTests/FileTestOpertorsNotVectors.o"
+	@echo "... CodeTests/FileTestOpertorsNotVectors.i"
+	@echo "... CodeTests/FileTestOpertorsNotVectors.s"
+	@echo "... CodeTests/FileTestOpertorsVectors.o"
+	@echo "... CodeTests/FileTestOpertorsVectors.i"
+	@echo "... CodeTests/FileTestOpertorsVectors.s"
+	@echo "... CodeTests/FileTestVector.o"
+	@echo "... CodeTests/FileTestVector.i"
+	@echo "... CodeTests/FileTestVector.s"
+	@echo "... CodeTests/FilesManagerTest.o"
+	@echo "... CodeTests/FilesManagerTest.i"
+	@echo "... CodeTests/FilesManagerTest.s"
 	@echo "... DesignText.o"
 	@echo "... DesignText.i"
 	@echo "... DesignText.s"
@@ -249,9 +372,6 @@ help:
 	@echo "... FilesManager.o"
 	@echo "... FilesManager.i"
 	@echo "... FilesManager.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 

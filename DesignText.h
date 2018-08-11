@@ -1,7 +1,3 @@
-//
-// Created by sherksecret on 8/11/18.
-//
-
 #ifndef FILESAPI_DESIGNTEXT_H
 #define FILESAPI_DESIGNTEXT_H
 

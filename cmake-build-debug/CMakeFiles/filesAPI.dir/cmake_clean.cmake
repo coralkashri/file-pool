@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/filesAPI.dir/main.cpp.o"
   "CMakeFiles/filesAPI.dir/FilesManager.cpp.o"
   "CMakeFiles/filesAPI.dir/File.cpp.o"
+  "CMakeFiles/filesAPI.dir/DesignText.cpp.o"
   "filesAPI.pdb"
   "filesAPI"
 )

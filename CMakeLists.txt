@@ -3,4 +3,4 @@ project(filesAPI)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(filesAPI main.cpp FilesManager.cpp FilesManager.h File.cpp File.h)
+add_executable(filesAPI main.cpp FilesManager.cpp FilesManager.h File.cpp File.h DesignText.cpp DesignText.h)

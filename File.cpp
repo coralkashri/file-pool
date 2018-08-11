@@ -18,7 +18,7 @@ void File::open(std::ios_base::openmode mode_flags, const FileAction &new_file_a
     if (file_action != new_file_action) {
         file_ptr.close();
         if (file_action != FileAction::NONE) {
-            std::cerr << "Pay attention: file mission replaced by another one." << std::endl;
+            std::cout << DesignText::make_colored("Pay attention: file mission replaced by another one.", DesignText::Color::RED, true) << std::endl;
         }
     }
     file_action = new_file_action;
@@ -26,7 +26,7 @@ void File::open(std::ios_base::openmode mode_flags, const FileAction &new_file_a
     if (!file_ptr.is_open()) {
         file_ptr.open(name, mode_flags);
         if (file_ptr.fail()) {
-            std::cerr << "Error Opening file: " << name << std::endl;
+            std::cout << DesignText::make_colored("Error Opening file: " + name, DesignText::Color::RED, true) << std::endl;
             // todo:: Throw an exception
         }
     }
@@ -38,6 +38,7 @@ void File::close(bool automatic) {
             file_ptr.close();
             read_write_mode = ReadWriteMode::DONE;
             file_action = FileAction::NONE;
+            std::cout << DesignText::make_colored("File has safely closed.", DesignText::Color::GREEN, false) << std::endl;
         }
     }
 }
@@ -65,3 +66,6 @@ void File::update_rwm() {
 void File::init_read_write_mode(const ReadWriteMode &new_mode) {
     read_write_mode = new_mode;
 }
+
+//template File& File::write<int>(const int &val, size_t data_size, std::ios_base::openmode mode_flags);
+//template File& File::read<int>(int &val, size_t data_size, std::ios_base::openmode mode_flags);

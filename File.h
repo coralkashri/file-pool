@@ -8,6 +8,8 @@
 #include <iostream>
 #include <mutex>
 #include <fstream>
+#include <vector>
+#include "DesignText.h"
 
 /**
  * >> if file_mode is OPEN_IN_ACTION:
@@ -45,33 +47,61 @@ private:
     void open(std::ios_base::openmode mode_flags, const FileAction &new_file_action);
     void update_rwm(); // Change read mode
     void close(bool automatic);
+
 public:
     File(const std::string &file_path);
     ~File();
     void close();
     void init_read_write_mode(const ReadWriteMode &read_mode);
 
-    template<typename T>
-    File& read(T &val, const size_t data_size, std::ios_base::openmode mode_flags = std::ios_base::in) {
-        open(mode_flags, FileAction::READ);
-        std::lock_guard<std::mutex> guard(read_write_mutex);
-
-        file_ptr.read((char*)(&val), data_size);
-
-        update_rwm();
-        return *this;
-    }
-
-    template<typename T>
-    File& write(const T &val, const size_t data_size, std::ios_base::openmode mode_flags = std::ios_base::out | std::ios_base::app) {
-        open(mode_flags, FileAction::WRITE);
-        std::lock_guard<std::mutex> guard(read_write_mutex);
-
-        file_ptr.write((char*)(&val), data_size);
-
-        update_rwm();
-        return *this;
-    }
+    template<typename T> File& read(T &val, size_t data_size = 1, std::ios_base::openmode mode_flags = std::ios_base::in);
+    template<typename T> File& read(std::vector<T> &val, std::ios_base::openmode mode_flags = std::ios_base::in);
+    template<typename T> File& write(const T &val, size_t data_size = 1, std::ios_base::openmode mode_flags = std::ios::out | std::ios::binary | std::ios::in);
+    template<typename T> File& write(const std::vector<T> &val, std::ios_base::openmode mode_flags = std::ios::out | std::ios::binary | std::ios::in);
 };
+
+template<typename T>
+File& File::read(T &val, const size_t data_size, std::ios_base::openmode mode_flags) {
+    open(mode_flags, FileAction::READ);
+    std::lock_guard<std::mutex> guard(read_write_mutex);
+
+    file_ptr.read((char*)(&val), sizeof(T) * data_size);
+
+    update_rwm();
+    return *this;
+}
+
+template<typename T>
+File& File::write(const T &val, const size_t data_size, std::ios_base::openmode mode_flags) {
+    open(mode_flags, FileAction::WRITE);
+    std::lock_guard<std::mutex> guard(read_write_mutex);
+
+    file_ptr.write(reinterpret_cast<const char*>(&val), sizeof(T) * data_size);
+
+    update_rwm();
+    return *this;
+}
+
+template<typename T>
+File& File::read(std::vector<T> &val, std::ios_base::openmode mode_flags) {
+    open(mode_flags, FileAction::READ);
+    std::lock_guard<std::mutex> guard(read_write_mutex);
+
+    file_ptr.read(reinterpret_cast<char*>(val.data()), sizeof(T) * val.size());
+
+    update_rwm();
+    return *this;
+}
+
+template<typename T>
+File& File::write(const std::vector<T> &val, std::ios_base::openmode mode_flags) {
+    open(mode_flags, FileAction::WRITE);
+    std::lock_guard<std::mutex> guard(read_write_mutex);
+
+    file_ptr.write(reinterpret_cast<const char*>(val.data()), sizeof(T) * val.size());
+
+    update_rwm();
+    return *this;
+}
 
 #endif //FILESAPI_FILE_H

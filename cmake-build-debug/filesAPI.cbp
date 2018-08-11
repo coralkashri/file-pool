@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/DesignText.cpp">
+			<Option target="filesAPI"/>
+		</Unit>
+		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/DesignText.h">
+			<Option target="filesAPI"/>
+		</Unit>
 		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/File.cpp">
 			<Option target="filesAPI"/>
 		</Unit>

@@ -123,6 +123,33 @@ filesAPI/fast:
 	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/build
 .PHONY : filesAPI/fast
 
+DesignText.o: DesignText.cpp.o
+
+.PHONY : DesignText.o
+
+# target to build an object file
+DesignText.cpp.o:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/DesignText.cpp.o
+.PHONY : DesignText.cpp.o
+
+DesignText.i: DesignText.cpp.i
+
+.PHONY : DesignText.i
+
+# target to preprocess a source file
+DesignText.cpp.i:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/DesignText.cpp.i
+.PHONY : DesignText.cpp.i
+
+DesignText.s: DesignText.cpp.s
+
+.PHONY : DesignText.s
+
+# target to generate assembly for a file
+DesignText.cpp.s:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/DesignText.cpp.s
+.PHONY : DesignText.cpp.s
+
 File.o: File.cpp.o
 
 .PHONY : File.o
@@ -213,6 +240,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... filesAPI"
+	@echo "... DesignText.o"
+	@echo "... DesignText.i"
+	@echo "... DesignText.s"
 	@echo "... File.o"
 	@echo "... File.i"
 	@echo "... File.s"

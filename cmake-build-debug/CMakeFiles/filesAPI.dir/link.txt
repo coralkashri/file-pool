@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/filesAPI.dir/main.cpp.o CMakeFiles/filesAPI.dir/FilesManager.cpp.o CMakeFiles/filesAPI.dir/File.cpp.o  -o filesAPI 
+/usr/bin/c++  -g   CMakeFiles/filesAPI.dir/main.cpp.o CMakeFiles/filesAPI.dir/FilesManager.cpp.o CMakeFiles/filesAPI.dir/File.cpp.o CMakeFiles/filesAPI.dir/DesignText.cpp.o  -o filesAPI 

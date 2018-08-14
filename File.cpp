@@ -58,20 +58,23 @@ void File::update_rwm() {
     switch (read_write_mode) {
         case ReadWriteMode::SINGLE_AND_DONE:
         case ReadWriteMode::DONE:
-            read_write_mode = ReadWriteMode::DONE;
-            file_action = FileAction::NONE;
             close(true);
             break;
         case ReadWriteMode::SINGLE_AND_MORE:
             read_write_mode = ReadWriteMode::SINGLE_AND_DONE;
             break;
         case ReadWriteMode::MULTIPLE:
+            if (multiple_times_left > -1 && !--multiple_times_left) {
+                multiple_times_left = -1;
+                close(true);
+            }
             break;
     }
 }
 
-void File::init_read_write_mode(const ReadWriteMode &new_mode) {
+void File::init_read_write_mode(const ReadWriteMode &new_mode, const int multiple_times) {
     read_write_mode = new_mode;
+    multiple_times_left = multiple_times;
 }
 
 void File::init_read_flags(const std::ios_base::openmode new_read_flags) {

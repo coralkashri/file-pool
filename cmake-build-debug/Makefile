@@ -123,6 +123,33 @@ filesAPI/fast:
 	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/build
 .PHONY : filesAPI/fast
 
+CodeTests/ComplexDataStructure.o: CodeTests/ComplexDataStructure.cpp.o
+
+.PHONY : CodeTests/ComplexDataStructure.o
+
+# target to build an object file
+CodeTests/ComplexDataStructure.cpp.o:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.o
+.PHONY : CodeTests/ComplexDataStructure.cpp.o
+
+CodeTests/ComplexDataStructure.i: CodeTests/ComplexDataStructure.cpp.i
+
+.PHONY : CodeTests/ComplexDataStructure.i
+
+# target to preprocess a source file
+CodeTests/ComplexDataStructure.cpp.i:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.i
+.PHONY : CodeTests/ComplexDataStructure.cpp.i
+
+CodeTests/ComplexDataStructure.s: CodeTests/ComplexDataStructure.cpp.s
+
+.PHONY : CodeTests/ComplexDataStructure.s
+
+# target to generate assembly for a file
+CodeTests/ComplexDataStructure.cpp.s:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.s
+.PHONY : CodeTests/ComplexDataStructure.cpp.s
+
 CodeTests/FileTestNotVector.o: CodeTests/FileTestNotVector.cpp.o
 
 .PHONY : CodeTests/FileTestNotVector.o
@@ -348,6 +375,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... filesAPI"
+	@echo "... CodeTests/ComplexDataStructure.o"
+	@echo "... CodeTests/ComplexDataStructure.i"
+	@echo "... CodeTests/ComplexDataStructure.s"
 	@echo "... CodeTests/FileTestNotVector.o"
 	@echo "... CodeTests/FileTestNotVector.i"
 	@echo "... CodeTests/FileTestNotVector.s"

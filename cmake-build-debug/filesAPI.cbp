@@ -120,9 +120,6 @@
 		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/FilesManager.h">
 			<Option target="filesAPI"/>
 		</Unit>
-		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/is_stl_container_impl.h">
-			<Option target="filesAPI"/>
-		</Unit>
 		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

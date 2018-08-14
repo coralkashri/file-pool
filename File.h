@@ -6,7 +6,6 @@
 #include <fstream>
 #include <vector>
 #include "DesignText.h"
-#include "is_stl_container_impl.h"
 
 /// Use in read/write for non-vectors overload operator. e.g: file >> rw_t<T>{val, 1};
 template<typename T> using rw_t = std::tuple<T*, const size_t&>;
@@ -37,6 +36,7 @@ enum class FileMode {
 
 class File {
 private:
+    bool                    is_ready;
     std::string             name;
     FileMode                file_mode;
     ReadWriteMode           read_write_mode;
@@ -47,16 +47,23 @@ private:
     bool                    is_open;
     std::ios_base::openmode read_flags;
     std::ios_base::openmode write_flags;
+    // todo:: Add variable file_path for case that the files_path in FilesManager class won't be empty.
 
     void open(std::ios_base::openmode mode_flags, const FileAction &new_file_action);
     void update_rwm(); // Change read mode
     void close(bool automatic);
-    template<class T, class vec_t> bool is_t_vector(const T &val);
+    bool is_file_ready(int);
 
 public:
+    // todo:: Add parameter "file_name" to the constructor, make default value for "file_path" => "".
+    // todo:: The FilesManager class will pass the files_path value into "file_path" parameter.
     File(const std::string &file_path);
     ~File();
     void close();
+    void set_name(const std::string &new_name);
+    void operator=(const std::string &new_name);
+    std::string get_name();
+    bool is_file_ready();
 
     /**
      *
@@ -114,6 +121,9 @@ public:
 };
 
 template<class T> File& File::read(T *val, const size_t data_size) {
+    if (!is_file_ready(0)) {
+        return *this;
+    }
     open(read_flags, FileAction::READ);
     std::lock_guard<std::mutex> guard(read_write_mutex);
 
@@ -124,6 +134,9 @@ template<class T> File& File::read(T *val, const size_t data_size) {
 }
 
 template<class T> File& File::write(const T *val, const size_t data_size) {
+    if (!is_file_ready(0)) {
+        return *this;
+    }
     open(write_flags, FileAction::WRITE);
     std::lock_guard<std::mutex> guard(read_write_mutex);
 
@@ -134,10 +147,9 @@ template<class T> File& File::write(const T *val, const size_t data_size) {
 }
 
 template<class T> File& File::read(std::vector<T> &val) {
-    /*if (is_stl_container_impl::is_stl_container<T>::value) {
-        std::cout << "read: vector of vectors" << std::endl;
+    if (!is_file_ready(0)) {
         return *this;
-    }*/
+    }
     open(read_flags, FileAction::READ);
     std::lock_guard<std::mutex> guard(read_write_mutex);
 
@@ -148,10 +160,9 @@ template<class T> File& File::read(std::vector<T> &val) {
 }
 
 template<typename T> File& File::write(const std::vector<T> &val) {
-    /*if (is_stl_container_impl::is_stl_container<T>::value) {
-        std::cout << "write: vector of vectors" << std::endl;
+    if (!is_file_ready(0)) {
         return *this;
-    }*/
+    }
     open(write_flags, FileAction::WRITE);
     std::lock_guard<std::mutex> guard(read_write_mutex);
 
@@ -175,11 +186,6 @@ template<class T> File &File::operator<<(const std::vector<T> &data) {
 
 template<class T> File &File::operator<<(const rw_t<T> &info) {
     return write(std::get<0>(info), std::get<1>(info));
-}
-
-template<class T, class vec_t> bool File::is_t_vector(const T &val) {
-    //using vec_t = typename T::value_type;
-    return typeid(T).name() == typeid(std::vector<vec_t>).name();
 }
 
 #endif //FILESAPI_FILE_H

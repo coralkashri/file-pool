@@ -2,6 +2,9 @@
 
 File::File(const std::string &file_path) {
     name = file_path;
+    if (file_path.empty()) {
+        is_ready = false;
+    }
     is_open = false;
     file_mode = FileMode::OPEN_IN_ACTION;
     read_write_mode = ReadWriteMode::DONE;
@@ -17,6 +20,13 @@ File::~File() {
 
 void File::open(std::ios_base::openmode mode_flags, const FileAction &new_file_action) {
     std::lock_guard<std::mutex> guard(read_write_mutex);
+    if (!is_file_ready(0)) {
+        if (is_open) {
+            file_ptr.close();
+            is_open = false;
+        }
+        return;
+    }
     if (file_action != new_file_action) {
         file_ptr.close();
         is_open = false;
@@ -55,6 +65,9 @@ void File::close() {
 }
 
 void File::update_rwm() {
+    if (!is_file_ready(0)) {
+        return;
+    }
     switch (read_write_mode) {
         case ReadWriteMode::SINGLE_AND_DONE:
         case ReadWriteMode::DONE:
@@ -83,6 +96,37 @@ void File::init_read_flags(const std::ios_base::openmode new_read_flags) {
 
 void File::init_write_flags(const std::ios_base::openmode new_write_flags) {
     write_flags = new_write_flags;
+}
+
+void File::set_name(const std::string &new_name) {
+    if (!new_name.empty()) {
+        name = new_name;
+        is_ready = true;
+        return;
+    }
+    if (name.empty()) {
+        is_ready = false;
+    }
+}
+
+std::string File::get_name() {
+    return name;
+}
+
+bool File::is_file_ready(int i) {
+    if (!is_ready) {
+        std::cout << DesignText::make_colored("Pay attention: file name is empty. can't open this file.", DesignText::Color::RED, true) << std::endl;
+        return false;
+    }
+    return true;
+}
+
+bool File::is_file_ready() {
+    return is_ready;
+}
+
+void File::operator=(const std::string &new_name) {
+    set_name(new_name);
 }
 
 //template File& File::write<int>(const int &val, size_t data_size, std::ios_base::openmode mode_flags);

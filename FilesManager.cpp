@@ -6,9 +6,7 @@ FilesManager::FilesManager(size_t max_files, const std::string &files_path) : ma
 void FilesManager::add(const std::string &id, const std::string &file) {
     // todo:: If there is value in this->files_path variable use it before the file name in the add operation,
     if (max_files == 0 || files.size() + 1 < max_files) {
-        std::string file_path;
-        file_path = files_path == "" ? file : files_path + file;
-        files.insert(std::pair<std::string, std::shared_ptr<File>>(id, std::make_shared<File>(file_path)));
+        files.insert(std::pair<std::string, std::shared_ptr<File>>(id, std::make_shared<File>(file, files_path)));
     }
 }
 

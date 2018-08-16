@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int main() {
+int mainComplexDataStructureTest() {
     File f("../Test/test_file.bin");
     vector<vector<complex<float>>> wdata = {
             {{1, 9}, {3, 75}, {213.34, 21.4}, {153.1, 15.85}},

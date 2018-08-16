@@ -38,6 +38,7 @@ class File {
 private:
     bool                    is_ready;
     std::string             name;
+    std::string             path;
     FileMode                file_mode;
     ReadWriteMode           read_write_mode;
     int                     multiple_times_left;
@@ -47,7 +48,7 @@ private:
     bool                    is_open;
     std::ios_base::openmode read_flags;
     std::ios_base::openmode write_flags;
-    // todo:: Add variable file_path for case that the files_path in FilesManager class won't be empty.
+    // todo:: Add new flag: "use_exceptions". Read <todo> in FilesManager.h file.
 
     void open(std::ios_base::openmode mode_flags, const FileAction &new_file_action);
     void update_rwm(); // Change read mode
@@ -55,13 +56,12 @@ private:
     bool is_file_ready(int);
 
 public:
-    // todo:: Add parameter "file_name" to the constructor, make default value for "file_path" => "".
-    // todo:: The FilesManager class will pass the files_path value into "file_path" parameter.
-    File(const std::string &file_path);
+    // todo:: Add parameter: bool exceptions, and update with it the class's variable "use_exceptions". (default false).
+    explicit File(const std::string &file_name, const std::string &file_path = "");
     ~File();
     void close();
     void set_name(const std::string &new_name);
-    void operator=(const std::string &new_name);
+    File& operator=(const std::string &new_name);
     std::string get_name();
     bool is_file_ready();
 

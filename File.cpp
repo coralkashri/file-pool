@@ -1,10 +1,10 @@
 #include "File.h"
+#include "Exceptions.h"
 
-File::File(const std::string &file_path) {
-    name = file_path;
-    if (file_path.empty()) {
-        is_ready = false;
-    }
+File::File(const std::string &file_name, const std::string &file_path) {
+    name = file_name;
+    path = file_path;
+    is_ready = !name.empty();
     is_open = false;
     file_mode = FileMode::OPEN_IN_ACTION;
     read_write_mode = ReadWriteMode::DONE;
@@ -37,14 +37,15 @@ void File::open(std::ios_base::openmode mode_flags, const FileAction &new_file_a
     file_action = new_file_action;
 
     if (!is_open) {
-        file_ptr.open(name, mode_flags);
-        std::cout << DesignText::make_colored("File has safely opened.", DesignText::Color::GREEN, false) << std::endl;
-        is_open = true;
+        file_ptr.open(path + name, mode_flags);
         if (file_ptr.fail()) {
             is_open = false;
-            std::cout << DesignText::make_colored("Error Opening file: " + name, DesignText::Color::RED, true) << std::endl;
-            // todo:: Throw an exception
+            // todo:: Check the flag's "use_exceptions" value.
+            std::cout << DesignText::make_colored("Error Opening file: " + path + name, DesignText::Color::RED, true) << std::endl;
+            throw FileOpenException(path + name);
         }
+        is_open = true;
+        std::cout << DesignText::make_colored("File has safely opened.", DesignText::Color::GREEN, false) << std::endl;
     }
 }
 
@@ -113,7 +114,7 @@ std::string File::get_name() {
     return name;
 }
 
-bool File::is_file_ready(int i) {
+bool File::is_file_ready(int) {
     if (!is_ready) {
         std::cout << DesignText::make_colored("Pay attention: file name is empty. can't open this file.", DesignText::Color::RED, true) << std::endl;
         return false;
@@ -125,8 +126,9 @@ bool File::is_file_ready() {
     return is_ready;
 }
 
-void File::operator=(const std::string &new_name) {
+File& File::operator=(const std::string &new_name) {
     set_name(new_name);
+    return *this;
 }
 
 //template File& File::write<int>(const int &val, size_t data_size, std::ios_base::openmode mode_flags);

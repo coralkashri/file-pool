@@ -249,28 +249,52 @@ CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsNotVectors.cpp.o.provides: CMa
 CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsNotVectors.cpp.o.provides.build: CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsNotVectors.cpp.o
 
 
-CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.o: CMakeFiles/filesAPI.dir/flags.make
-CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.o: ../CodeTests/ComplexDataStructure.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.o -c /home/sherksecret/Projects/CLionProjects/filesApi/CodeTests/ComplexDataStructure.cpp
+CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.o: CMakeFiles/filesAPI.dir/flags.make
+CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.o: ../CodeTests/ComplexDataStructureTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.o -c /home/sherksecret/Projects/CLionProjects/filesApi/CodeTests/ComplexDataStructureTest.cpp
 
-CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sherksecret/Projects/CLionProjects/filesApi/CodeTests/ComplexDataStructure.cpp > CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.i
+CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sherksecret/Projects/CLionProjects/filesApi/CodeTests/ComplexDataStructureTest.cpp > CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.i
 
-CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sherksecret/Projects/CLionProjects/filesApi/CodeTests/ComplexDataStructure.cpp -o CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.s
+CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sherksecret/Projects/CLionProjects/filesApi/CodeTests/ComplexDataStructureTest.cpp -o CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.s
 
-CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.o.requires:
+CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.o.requires:
 
-.PHONY : CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.o.requires
+.PHONY : CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.o.requires
 
-CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.o.provides: CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.o.requires
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.o.provides.build
-.PHONY : CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.o.provides
+CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.o.provides: CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.o.requires
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.o.provides.build
+.PHONY : CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.o.provides
 
-CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.o.provides.build: CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.o
+CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.o.provides.build: CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.o
+
+
+CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.o: CMakeFiles/filesAPI.dir/flags.make
+CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.o: ../CodeTests/ExceptionsTester.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.o -c /home/sherksecret/Projects/CLionProjects/filesApi/CodeTests/ExceptionsTester.cpp
+
+CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sherksecret/Projects/CLionProjects/filesApi/CodeTests/ExceptionsTester.cpp > CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.i
+
+CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sherksecret/Projects/CLionProjects/filesApi/CodeTests/ExceptionsTester.cpp -o CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.s
+
+CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.o.requires:
+
+.PHONY : CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.o.requires
+
+CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.o.provides: CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.o.requires
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.o.provides.build
+.PHONY : CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.o.provides
+
+CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.o.provides.build: CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.o
 
 
 # Object files for target filesAPI
@@ -283,7 +307,8 @@ filesAPI_OBJECTS = \
 "CMakeFiles/filesAPI.dir/CodeTests/FileTestNotVector.cpp.o" \
 "CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsVectors.cpp.o" \
 "CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsNotVectors.cpp.o" \
-"CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.o"
+"CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.o" \
+"CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.o"
 
 # External object files for target filesAPI
 filesAPI_EXTERNAL_OBJECTS =
@@ -296,10 +321,11 @@ filesAPI: CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.o
 filesAPI: CMakeFiles/filesAPI.dir/CodeTests/FileTestNotVector.cpp.o
 filesAPI: CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsVectors.cpp.o
 filesAPI: CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsNotVectors.cpp.o
-filesAPI: CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.o
+filesAPI: CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.o
+filesAPI: CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.o
 filesAPI: CMakeFiles/filesAPI.dir/build.make
 filesAPI: CMakeFiles/filesAPI.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable filesAPI"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable filesAPI"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/filesAPI.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -315,7 +341,8 @@ CMakeFiles/filesAPI.dir/requires: CMakeFiles/filesAPI.dir/CodeTests/FilesManager
 CMakeFiles/filesAPI.dir/requires: CMakeFiles/filesAPI.dir/CodeTests/FileTestNotVector.cpp.o.requires
 CMakeFiles/filesAPI.dir/requires: CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsVectors.cpp.o.requires
 CMakeFiles/filesAPI.dir/requires: CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsNotVectors.cpp.o.requires
-CMakeFiles/filesAPI.dir/requires: CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructure.cpp.o.requires
+CMakeFiles/filesAPI.dir/requires: CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.o.requires
+CMakeFiles/filesAPI.dir/requires: CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.o.requires
 
 .PHONY : CMakeFiles/filesAPI.dir/requires
 

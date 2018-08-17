@@ -91,7 +91,7 @@ Remove file from manager
 fm -= "5";
 ```
 
-##### Use case - Insert multiple data to file and read into array
+##### Use case - Insert multiple data to file and read into array or into vector
 Write data to file
 ```cpp
 fm["2"].init_read_write_mode(ReadWriteMode::MULTIPLE);

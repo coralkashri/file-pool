@@ -7,6 +7,7 @@ using namespace std;
 using namespace FilesApi;
 
 int main() {
+    /// Simple use - write and read single simple value using operators
     /*FilesManager fm;
     fm.add("fileID", "../TestFiles/test_file.bin");
     int a = 12, b;
@@ -14,6 +15,7 @@ int main() {
     fm.get("fileID").read(&b);
     cout << b << endl; // 12*/
 
+    /// Simple use - write and read single simple value using operators
     /*FilesManager fm;
     fm["fileID"] = "../TestFiles/test_file.bin";
     int a = 12, b;
@@ -21,6 +23,7 @@ int main() {
     fm["fileID"] >> rw_t<int>(&b, 1);
     cout << b << endl; // 12*/
 
+    /// Simple use - write and read single vector using operators
     /*FilesManager fm;
     fm["fileID"] = "../TestFiles/test_file.bin";
     vector<int> a = {1, 2, 3};
@@ -31,6 +34,7 @@ int main() {
         cout << val << " ";
     } // 1 2 3*/
 
+    /// Simple use - remove file from manager object
     /*FilesManager fm(false, 0, "../TestFiles/");
     //fm.add("5", "../TestFiles/test_file.bin"); // Add file to collection
     fm += add_data("5", "test_file.bin");
@@ -46,6 +50,7 @@ int main() {
     fm.get("5").write(&a); // Error
     fm.get("5") >> rw_t<int>(&b, 1); // Error*/
 
+    /// Use case - Insert multiple data to file and read into array
     /*FilesManager fm(false, 0, "../TestFiles/");
     fm += add_data("2", "test_file.bin");
     fm["2"].init_read_write_mode(ReadWriteMode::MULTIPLE);

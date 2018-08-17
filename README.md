@@ -5,7 +5,7 @@ filesApi gives you an easy files collection manager, which take care for all of 
 This API built in linux os (ubuntu 16.04) and haven't been checked on other OS.
 
 ## Examples
-##### Simple use - write and read single simple value
+#### Simple use - write and read single simple value
 Init FilesManager object:
 ```cpp
 FilesManager fm;
@@ -22,7 +22,7 @@ fm.get("fileID").read(&b);
 cout << b << endl; // 12
 ```
 
-##### Simple use - write and read single simple value using operators
+#### Simple use - write and read single simple value using operators
 Init FilesManager object:
 ```cpp
 FilesManager fm;
@@ -39,7 +39,7 @@ fm["fileID"] >> rw_t<int>(&b, 1);
 cout << b << endl; // 12
 ```
 
-##### Simple use - write and read single vector using operators
+#### Simple use - write and read single vector using operators
 Write data
 ```cpp
 vector<int> a = {1, 2, 3};
@@ -54,7 +54,7 @@ for (auto& val : b) {
 } // 1 2 3
 ```
 
-##### Simple use - remove file from manager object
+#### Simple use - remove file from manager object
 Insert file to manager
 ```cpp
 FilesManager fm;
@@ -80,7 +80,7 @@ fm.get("5").write(&a); // Error
 fm.get("5") >> rw_t<int>(&b, 1); // Error
 ```
 
-##### Simple use - remove file from manager object using operators
+#### Simple use - remove file from manager object using operators
 Insert file to manager
 ```cpp
 FilesManager fm(false, 0, "../TestFiles/");
@@ -91,7 +91,7 @@ Remove file from manager
 fm -= "5";
 ```
 
-##### Use case - Insert multiple data to file and read into array or into vector
+#### Use case - Insert multiple data to file and read into array or into vector
 Write data to file
 ```cpp
 fm["2"].init_read_write_mode(ReadWriteMode::MULTIPLE);
@@ -118,7 +118,7 @@ for (size_t i = 0; i < array_size; i++) {
 } // 0...99
 ```
 
-##### Use case - Write and read vector of vectors
+#### Use case - Write and read vector of vectors
 Init vectors
 ```cpp
 File f("../TestFiles/test_file.bin");

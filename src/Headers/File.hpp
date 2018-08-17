@@ -55,8 +55,8 @@ namespace FilesApi {
 
         /**
          * Open file in specific format
-         * @param mode_flags - fstream.open() flags.
-         * @param new_file_action - Open purpose.
+         * \param mode_flags - fstream.open() flags.
+         * \param new_file_action - Open purpose.
          */
         void open(std::ios_base::openmode mode_flags, const FileAction &new_file_action);
 
@@ -67,22 +67,22 @@ namespace FilesApi {
 
         /**
          * Close file
-         * @param automatic - Close request from API(true) or from User(false)
+         * \param automatic - Close request from API(true) or from User(false)
          */
         void close(bool automatic);
 
         /**
          * Is file ready for read/write actions. Exception if file not ready.
-         * @return Is file name not empty.
+         * \return Is file name not empty.
          */
         bool is_file_ready(int);
 
     public:
         /**
          * Ctor
-         * @param file_name     - if @param file_path == "" => path/to/file/filename.bin else filename.bin
-         * @param exceptions    - Throw exceptions on errors Or use bold cout messages.
-         * @param file_path     - file's path.
+         * \param file_name     - if @param file_path == "" => path/to/file/filename.bin else filename.bin
+         * \param exceptions    - Throw exceptions on errors Or use bold cout messages.
+         * \param file_path     - file's path.
          */
         explicit File(const std::string &file_name, bool exceptions = false, const std::string &file_path = "");
 
@@ -98,118 +98,118 @@ namespace FilesApi {
 
         /**
          * Set file's name.
-         * @param new_name - New file's name.
+         * \param new_name - New file's name.
          */
         void set_name(const std::string &new_name);
 
         /**
          * Set file's name.
-         * @param new_name - New file's name.
+         * \param new_name - New file's name.
          */
         File &operator=(const std::string &new_name);
 
         /**
          * Get file's name
-         * @return File's name.
+         * \return File's name.
          */
         std::string get_name();
 
         /**
          * Is file ready for read/write actions. Without exception if file not ready.
-         * @return Is file name not empty.
+         * \return Is file name not empty.
          */
         bool is_file_ready();
 
         /**
          * Init current file's mode
-         * @param mode - How much reads/writes until the file will close.
-         * @param multiple_times - if mode is multiple note how much times (-1 for unknown - won't close the file without programmer order/interrupt).
+         * \param mode - How much reads/writes until the file will close.
+         * \param multiple_times - if mode is multiple note how much times (-1 for unknown - won't close the file without programmer order/interrupt).
          */
         void init_read_write_mode(const ReadWriteMode &mode, int multiple_times = -1);
 
         /**
          * Init read fstream flags.
-         * @param read_flags - When open function in read mode will occur, those flags will be in use.
+         * \param read_flags - When open function in read mode will occur, those flags will be in use.
          */
         void init_read_flags(std::ios_base::openmode read_flags = std::ios_base::in);
 
         /**
          * Init write fstream flags.
-         * @param write_flags - When open function in write mode will occur, those flags will be in use.
+         * \param write_flags - When open function in write mode will occur, those flags will be in use.
          */
         void init_write_flags(std::ios_base::openmode write_flags = std::ios::out | std::ios::binary | std::ios::in);
 
         /**
          * Read to non-vector variable
-         * @tparam T - variable type
-         * @param val - variable address
-         * @param data_size - in case of array- array's size.
-         * @return this File object.
+         * \param T - variable type
+         * \param val - variable address
+         * \param data_size - in case of array- array's size.
+         * \return this File object.
          */
         template<class T>
         File &read(T *val, size_t data_size = 1);
 
         /**
          * Read to vector variable
-         * @tparam T - vector type
-         * @param val - vector to read into (Have to be initialize with the size of inputs' count).
-         * @param data_size - vector to read into (Have to be initialize with the size of inputs' count).
-         * @return this File object.
+         * \tparam T - vector type
+         * \param val - vector to read into (Have to be initialize with the size of inputs' count).
+         * \param data_size - vector to read into (Have to be initialize with the size of inputs' count).
+         * \return this File object.
          */
         template<class T>
         File &read(std::vector<T> &val);
 
         /**
          * Write non-vector variable
-         * @tparam T - variable type
-         * @param val - variable address
-         * @param data_size - in case of array- array's size.
-         * @return this File object.
+         * \tparam T - variable type
+         * \param val - variable address
+         * \param data_size - in case of array- array's size.
+         * \return this File object.
          */
         template<class T>
         File &write(const T *val, size_t data_size = 1);
 
         /**
          * Write vector variable
-         * @tparam T - vector type
-         * @param val - vector to write.
-         * @return this File object.
+         * \tparam T - vector type
+         * \param val - vector to write.
+         * \return this File object.
          */
         template<class T>
         File &write(const std::vector<T> &val);
 
         /**
          * Read to vector
-         * @tparam T - vector type
-         * @param info - tuple(0)=> vector to read into, tuple(1)=> in case of array- array's size (else write 1)
-         * @return this File object.
+         * \tparam T - vector type
+         * \param info - tuple(0)=> vector to read into, tuple(1)=> in case of array- array's size (else write 1)
+         * \return this File object.
          */
         template<class T>
         File &operator>>(std::vector<T> &data);
 
         /**
          * Read to non-vector
-         * @tparam T - variable type
-         * @param info - tuple(0)=> variable non-vector to read into, tuple(1)=> in case of array- array's size (else write 1)
-         * @return this File object
+         * \tparam T - variable type
+         * \param info - tuple(0)=> variable non-vector to read into, tuple(1)=> in case of array- array's size (else write 1)
+         * \return this File object
          */
         template<class T>
         File &operator>>(const rw_t<T> &info);
 
         /**
          * Write vector to file
-         * @tparam T - vector type
-         * @param info - tuple(0)=> vector to write, tuple(1)=> in case of array- array's size (else write 1)
-         * @return this File object
+         * \tparam T - vector type
+         * \param info - tuple(0)=> vector to write, tuple(1)=> in case of array- array's size (else write 1)
+         * \return this File object
          */
         template<class T>
         File &operator<<(const std::vector<T> &info);
 
         /**
          * Write non-vector to file
-         * @tparam T - variable type
-         * @param info - tuple(0)=> variable non-vector to read into, tuple(1)=> in case of array- array's size (else write 1)
-         * @return this File object
+         * \tparam T - variable type
+         * \param info - tuple(0)=> variable non-vector to read into, tuple(1)=> in case of array- array's size (else write 1)
+         * \return this File object
          */
         template<class T>
         File &operator<<(const rw_t<T> &info);

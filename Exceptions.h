@@ -4,22 +4,21 @@
 #include <iostream>
 #include <exception>
 
+namespace FilesApi {
+    class FileOpenException : public std::runtime_error {
+        std::string _file_name;
+        std::string what_message;
 
-class FileOpenException: public std::runtime_error
-{
-    std::string _file_name;
-    std::string what_message;
+    public:
+        explicit FileOpenException(const std::string &file_name) : runtime_error("") {
+            _file_name = file_name;
+            what_message = "Can't open file '" + _file_name + "' exception.";
+        }
 
-public:
-    explicit FileOpenException(const std::string &file_name) : runtime_error("") {
-        _file_name = file_name;
-        what_message = "Can't open file '" + _file_name + "' exception.";
-    }
-
-    virtual const char* what() const throw()
-    {
-        return what_message.c_str();
-    }
-};
+        virtual const char *what() const throw() {
+            return what_message.c_str();
+        }
+    };
+}
 
 #endif //FILESAPI_EXCEPTIONS_H

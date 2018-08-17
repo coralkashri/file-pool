@@ -4,6 +4,7 @@
 #include "../File.h"
 
 using namespace std;
+using namespace FilesApi;
 
 int mainFileTestNotVector() {
     File f("../Test/test_file.bin");

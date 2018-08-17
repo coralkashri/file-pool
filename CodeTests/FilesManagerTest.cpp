@@ -4,7 +4,7 @@
 #include "../FilesManager.h"
 
 using namespace std;
-
+using namespace FilesApi;
 
 int mainFilesManagerTest() {
     FilesManager fm;

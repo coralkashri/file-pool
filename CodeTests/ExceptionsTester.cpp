@@ -8,6 +8,7 @@
 #include "../File.h"
 
 using namespace std;
+using namespace FilesApi;
 
 int mainExceptionsTest() {
     File f("../Test/not_exist_file.bin", true);

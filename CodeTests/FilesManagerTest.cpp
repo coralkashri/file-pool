@@ -1,15 +1,15 @@
 #include <iostream>
 #include <vector>
 #include <complex>
-#include "../FilesManager.h"
+#include "../src/Headers/FilesManager.hpp"
 
 using namespace std;
 using namespace FilesApi;
 
 int mainFilesManagerTest() {
     FilesManager fm;
-    fm.add("1", "../Test/test_file.bin");
-    fm.add("2", "../Test/test_file2.bin");
+    fm.add("1", "../TestFiles/test_file.bin");
+    fm.add("2", "../TestFiles/test_file2.bin");
     vector<complex<float>> wdata = {{1, 9}, {3, 75}, {213.34, 21.4}, {153.1, 15.85}};
     vector<complex<float>> rdata(wdata.size());
 
@@ -38,7 +38,7 @@ int mainFilesManagerTest() {
     }
     cout << endl;
 
-    fm.add("5", "../Test/test_file.bin"); // Add file to collection
+    fm.add("5", "../TestFiles/test_file.bin"); // Add file to collection
     int a = 12;
     int b;
     fm.get("5") << rw_t<int>(&a, 1); // Work

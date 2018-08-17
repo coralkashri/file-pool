@@ -12,9 +12,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/sherksecret/Projects/CLionProjects/filesApi/CodeTests/FileTestVector.cpp" "/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles/filesAPI.dir/CodeTests/FileTestVector.cpp.o"
   "/home/sherksecret/Projects/CLionProjects/filesApi/CodeTests/FilesManagerOperatorsTest.cpp" "/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles/filesAPI.dir/CodeTests/FilesManagerOperatorsTest.cpp.o"
   "/home/sherksecret/Projects/CLionProjects/filesApi/CodeTests/FilesManagerTest.cpp" "/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.o"
-  "/home/sherksecret/Projects/CLionProjects/filesApi/DesignText.cpp" "/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles/filesAPI.dir/DesignText.cpp.o"
-  "/home/sherksecret/Projects/CLionProjects/filesApi/File.cpp" "/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles/filesAPI.dir/File.cpp.o"
-  "/home/sherksecret/Projects/CLionProjects/filesApi/FilesManager.cpp" "/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles/filesAPI.dir/FilesManager.cpp.o"
+  "/home/sherksecret/Projects/CLionProjects/filesApi/src/Sources/File.cpp" "/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o"
+  "/home/sherksecret/Projects/CLionProjects/filesApi/src/Sources/FilesManager.cpp" "/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o"
+  "/home/sherksecret/Projects/CLionProjects/filesApi/src/Utilities/DesignText.cpp" "/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

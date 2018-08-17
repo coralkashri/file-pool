@@ -1,13 +1,13 @@
 #include <iostream>
 #include <vector>
 #include <complex>
-#include "../File.h"
+#include "../src/Headers/File.hpp"
 
 using namespace std;
 using namespace FilesApi;
 
 int mainFileTestOpertorsNotVectors() {
-    File f("../Test/test_file.bin");
+    File f("../TestFiles/test_file.bin");
     const size_t size = 10;
     int wdata = 0;
     int rdata[size];

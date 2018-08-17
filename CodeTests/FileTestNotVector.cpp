@@ -1,13 +1,13 @@
 #include <iostream>
 #include <vector>
 #include <complex>
-#include "../File.h"
+#include "../src/Headers/File.hpp"
 
 using namespace std;
 using namespace FilesApi;
 
 int mainFileTestNotVector() {
-    File f("../Test/test_file.bin");
+    File f("../TestFiles/test_file.bin");
     size_t elements_count = 100;
 
     f.init_read_write_mode(ReadWriteMode::MULTIPLE);

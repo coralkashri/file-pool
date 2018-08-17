@@ -5,13 +5,13 @@
 #include <iostream>
 #include <vector>
 #include <complex>
-#include "../File.h"
+#include "../src/Headers/File.hpp"
 
 using namespace std;
 using namespace FilesApi;
 
 int mainExceptionsTest() {
-    File f("../Test/not_exist_file.bin", true);
+    File f("../TestFiles/not_exist_file.bin", true);
     int n = 4;
     string err;
     try {

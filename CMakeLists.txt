@@ -3,4 +3,4 @@ project(filesAPI)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(filesAPI CodeTests/FileTestVector.cpp FilesManager.cpp FilesManager.h File.cpp File.h DesignText.cpp DesignText.h CodeTests/FilesManagerTest.cpp CodeTests/FileTestNotVector.cpp CodeTests/FileTestOpertorsVectors.cpp CodeTests/FileTestOpertorsNotVectors.cpp CodeTests/ComplexDataStructureTest.cpp Exceptions.h CodeTests/ExceptionsTester.cpp CodeTests/FilesManagerOperatorsTest.cpp)
+add_executable(filesAPI CodeTests/FileTestVector.cpp src/Sources/FilesManager.cpp src/Headers/FilesManager.hpp src/Sources/File.cpp src/Headers/File.hpp src/Utilities/DesignText.cpp src/Utilities/DesignText.hpp CodeTests/FilesManagerTest.cpp CodeTests/FileTestNotVector.cpp CodeTests/FileTestOpertorsVectors.cpp CodeTests/FileTestOpertorsNotVectors.cpp CodeTests/ComplexDataStructureTest.cpp src/Utilities/Exceptions.hpp CodeTests/ExceptionsTester.cpp CodeTests/FilesManagerOperatorsTest.cpp)

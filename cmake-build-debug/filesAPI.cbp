@@ -108,25 +108,25 @@
 		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/CodeTests/FilesManagerTest.cpp">
 			<Option target="filesAPI"/>
 		</Unit>
-		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/DesignText.cpp">
+		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/src/Headers/File.hpp">
 			<Option target="filesAPI"/>
 		</Unit>
-		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/DesignText.h">
+		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/src/Headers/FilesManager.hpp">
 			<Option target="filesAPI"/>
 		</Unit>
-		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/Exceptions.h">
+		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/src/Sources/File.cpp">
 			<Option target="filesAPI"/>
 		</Unit>
-		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/File.cpp">
+		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/src/Sources/FilesManager.cpp">
 			<Option target="filesAPI"/>
 		</Unit>
-		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/File.h">
+		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/src/Utilities/DesignText.cpp">
 			<Option target="filesAPI"/>
 		</Unit>
-		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/FilesManager.cpp">
+		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/src/Utilities/DesignText.hpp">
 			<Option target="filesAPI"/>
 		</Unit>
-		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/FilesManager.h">
+		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/src/Utilities/Exceptions.hpp">
 			<Option target="filesAPI"/>
 		</Unit>
 		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/CMakeLists.txt">

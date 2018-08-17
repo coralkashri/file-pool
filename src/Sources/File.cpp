@@ -1,5 +1,5 @@
-#include "File.h"
-#include "Exceptions.h"
+#include "../Headers/File.hpp"
+#include "../Utilities/Exceptions.hpp"
 
 namespace FilesApi {
     File::File(const std::string &file_name, bool exceptions, const std::string &file_path) {

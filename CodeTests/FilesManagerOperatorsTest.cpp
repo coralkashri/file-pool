@@ -1,13 +1,13 @@
 #include <iostream>
 #include <vector>
 #include <complex>
-#include "../FilesManager.h"
+#include "../src/Headers/FilesManager.hpp"
 
 using namespace std;
 using namespace FilesApi;
 
 int mainFilesManagerOperatorsTest() {
-    FilesManager fm(false, 0, "../Test/");
+    FilesManager fm(false, 0, "../TestFiles/");
     string files[] = {"test_file.bin", "test_file2.bin"};
 
     fm["1"] = files[0];

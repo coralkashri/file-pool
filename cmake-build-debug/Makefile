@@ -339,86 +339,86 @@ CodeTests/FilesManagerTest.cpp.s:
 	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.s
 .PHONY : CodeTests/FilesManagerTest.cpp.s
 
-DesignText.o: DesignText.cpp.o
+src/Sources/File.o: src/Sources/File.cpp.o
 
-.PHONY : DesignText.o
-
-# target to build an object file
-DesignText.cpp.o:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/DesignText.cpp.o
-.PHONY : DesignText.cpp.o
-
-DesignText.i: DesignText.cpp.i
-
-.PHONY : DesignText.i
-
-# target to preprocess a source file
-DesignText.cpp.i:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/DesignText.cpp.i
-.PHONY : DesignText.cpp.i
-
-DesignText.s: DesignText.cpp.s
-
-.PHONY : DesignText.s
-
-# target to generate assembly for a file
-DesignText.cpp.s:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/DesignText.cpp.s
-.PHONY : DesignText.cpp.s
-
-File.o: File.cpp.o
-
-.PHONY : File.o
+.PHONY : src/Sources/File.o
 
 # target to build an object file
-File.cpp.o:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/File.cpp.o
-.PHONY : File.cpp.o
+src/Sources/File.cpp.o:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o
+.PHONY : src/Sources/File.cpp.o
 
-File.i: File.cpp.i
+src/Sources/File.i: src/Sources/File.cpp.i
 
-.PHONY : File.i
+.PHONY : src/Sources/File.i
 
 # target to preprocess a source file
-File.cpp.i:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/File.cpp.i
-.PHONY : File.cpp.i
+src/Sources/File.cpp.i:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Sources/File.cpp.i
+.PHONY : src/Sources/File.cpp.i
 
-File.s: File.cpp.s
+src/Sources/File.s: src/Sources/File.cpp.s
 
-.PHONY : File.s
+.PHONY : src/Sources/File.s
 
 # target to generate assembly for a file
-File.cpp.s:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/File.cpp.s
-.PHONY : File.cpp.s
+src/Sources/File.cpp.s:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Sources/File.cpp.s
+.PHONY : src/Sources/File.cpp.s
 
-FilesManager.o: FilesManager.cpp.o
+src/Sources/FilesManager.o: src/Sources/FilesManager.cpp.o
 
-.PHONY : FilesManager.o
+.PHONY : src/Sources/FilesManager.o
 
 # target to build an object file
-FilesManager.cpp.o:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/FilesManager.cpp.o
-.PHONY : FilesManager.cpp.o
+src/Sources/FilesManager.cpp.o:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o
+.PHONY : src/Sources/FilesManager.cpp.o
 
-FilesManager.i: FilesManager.cpp.i
+src/Sources/FilesManager.i: src/Sources/FilesManager.cpp.i
 
-.PHONY : FilesManager.i
+.PHONY : src/Sources/FilesManager.i
 
 # target to preprocess a source file
-FilesManager.cpp.i:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/FilesManager.cpp.i
-.PHONY : FilesManager.cpp.i
+src/Sources/FilesManager.cpp.i:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.i
+.PHONY : src/Sources/FilesManager.cpp.i
 
-FilesManager.s: FilesManager.cpp.s
+src/Sources/FilesManager.s: src/Sources/FilesManager.cpp.s
 
-.PHONY : FilesManager.s
+.PHONY : src/Sources/FilesManager.s
 
 # target to generate assembly for a file
-FilesManager.cpp.s:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/FilesManager.cpp.s
-.PHONY : FilesManager.cpp.s
+src/Sources/FilesManager.cpp.s:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.s
+.PHONY : src/Sources/FilesManager.cpp.s
+
+src/Utilities/DesignText.o: src/Utilities/DesignText.cpp.o
+
+.PHONY : src/Utilities/DesignText.o
+
+# target to build an object file
+src/Utilities/DesignText.cpp.o:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o
+.PHONY : src/Utilities/DesignText.cpp.o
+
+src/Utilities/DesignText.i: src/Utilities/DesignText.cpp.i
+
+.PHONY : src/Utilities/DesignText.i
+
+# target to preprocess a source file
+src/Utilities/DesignText.cpp.i:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.i
+.PHONY : src/Utilities/DesignText.cpp.i
+
+src/Utilities/DesignText.s: src/Utilities/DesignText.cpp.s
+
+.PHONY : src/Utilities/DesignText.s
+
+# target to generate assembly for a file
+src/Utilities/DesignText.cpp.s:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.s
+.PHONY : src/Utilities/DesignText.cpp.s
 
 # Help Target
 help:
@@ -453,15 +453,15 @@ help:
 	@echo "... CodeTests/FilesManagerTest.o"
 	@echo "... CodeTests/FilesManagerTest.i"
 	@echo "... CodeTests/FilesManagerTest.s"
-	@echo "... DesignText.o"
-	@echo "... DesignText.i"
-	@echo "... DesignText.s"
-	@echo "... File.o"
-	@echo "... File.i"
-	@echo "... File.s"
-	@echo "... FilesManager.o"
-	@echo "... FilesManager.i"
-	@echo "... FilesManager.s"
+	@echo "... src/Sources/File.o"
+	@echo "... src/Sources/File.i"
+	@echo "... src/Sources/File.s"
+	@echo "... src/Sources/FilesManager.o"
+	@echo "... src/Sources/FilesManager.i"
+	@echo "... src/Sources/FilesManager.s"
+	@echo "... src/Utilities/DesignText.o"
+	@echo "... src/Utilities/DesignText.i"
+	@echo "... src/Utilities/DesignText.s"
 .PHONY : help
 
 

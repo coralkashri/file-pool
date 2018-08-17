@@ -5,7 +5,7 @@
 #include <mutex>
 #include <fstream>
 #include <vector>
-#include "DesignText.h"
+#include "../Utilities/DesignText.hpp"
 
 namespace FilesApi {
 

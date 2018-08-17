@@ -36,19 +36,19 @@ enum class FileMode {
 
 class File {
 private:
-    bool                    is_ready;
-    std::string             name;
-    std::string             path;
-    FileMode                file_mode;
-    ReadWriteMode           read_write_mode;
-    int                     multiple_times_left;
-    FileAction              file_action;
-    std::mutex              read_write_mutex;
-    std::fstream            file_ptr;
-    bool                    is_open;
-    std::ios_base::openmode read_flags;
-    std::ios_base::openmode write_flags;
-    // todo:: Add new flag: "use_exceptions". Read <todo> in FilesManager.h file.
+    bool                        is_ready;
+    std::string                 name;
+    std::string                 path;
+    FileMode                    file_mode;
+    ReadWriteMode               read_write_mode;
+    int                         multiple_times_left;
+    FileAction                  file_action;
+    std::mutex                  read_write_mutex;
+    std::fstream                file_ptr;
+    bool                        is_open;
+    std::ios_base::openmode     read_flags;
+    std::ios_base::openmode     write_flags;
+    bool                        use_exceptions;
 
     void open(std::ios_base::openmode mode_flags, const FileAction &new_file_action);
     void update_rwm(); // Change read mode
@@ -57,7 +57,7 @@ private:
 
 public:
     // todo:: Add parameter: bool exceptions, and update with it the class's variable "use_exceptions". (default false).
-    explicit File(const std::string &file_name, const std::string &file_path = "");
+    explicit File(const std::string &file_name, bool exceptions = false, const std::string &file_path = "");
     ~File();
     void close();
     void set_name(const std::string &new_name);

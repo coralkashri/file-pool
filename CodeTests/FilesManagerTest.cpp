@@ -38,5 +38,18 @@ int mainFilesManagerTest() {
     }
     cout << endl;
 
+    fm.add("5", "../Test/test_file.bin"); // Add file to collection
+    int a = 12;
+    int b;
+    fm.get("5") << rw_t<int>(&a, 1); // Work
+    fm.get("5").write(&a); // Work
+    fm.get("5") >> rw_t<int>(&b, 1); // Work
+    cout << b << endl; // Prints 12
+
+    fm.remove("5"); // Remove the file from collection
+    fm.get("5") << rw_t<int>(&a, 1); // Error
+    fm.get("5").write(&a); // Error
+    fm.get("5") >> rw_t<int>(&b, 1); // Error
+
     return 0;
 }

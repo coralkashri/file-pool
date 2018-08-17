@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsNotVectors.cpp.o"
   "CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.o"
   "CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.o"
+  "CMakeFiles/filesAPI.dir/CodeTests/FilesManagerOperatorsTest.cpp.o"
   "filesAPI.pdb"
   "filesAPI"
 )

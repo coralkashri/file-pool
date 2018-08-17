@@ -25,6 +25,11 @@ CMakeFiles/filesAPI.dir/CodeTests/FileTestVector.cpp.o: ../CodeTests/FileTestVec
 CMakeFiles/filesAPI.dir/CodeTests/FileTestVector.cpp.o: ../DesignText.h
 CMakeFiles/filesAPI.dir/CodeTests/FileTestVector.cpp.o: ../File.h
 
+CMakeFiles/filesAPI.dir/CodeTests/FilesManagerOperatorsTest.cpp.o: ../CodeTests/FilesManagerOperatorsTest.cpp
+CMakeFiles/filesAPI.dir/CodeTests/FilesManagerOperatorsTest.cpp.o: ../DesignText.h
+CMakeFiles/filesAPI.dir/CodeTests/FilesManagerOperatorsTest.cpp.o: ../File.h
+CMakeFiles/filesAPI.dir/CodeTests/FilesManagerOperatorsTest.cpp.o: ../FilesManager.h
+
 CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.o: ../CodeTests/FilesManagerTest.cpp
 CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.o: ../DesignText.h
 CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.o: ../File.h

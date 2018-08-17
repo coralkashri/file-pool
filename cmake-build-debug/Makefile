@@ -285,6 +285,33 @@ CodeTests/FileTestVector.cpp.s:
 	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FileTestVector.cpp.s
 .PHONY : CodeTests/FileTestVector.cpp.s
 
+CodeTests/FilesManagerOperatorsTest.o: CodeTests/FilesManagerOperatorsTest.cpp.o
+
+.PHONY : CodeTests/FilesManagerOperatorsTest.o
+
+# target to build an object file
+CodeTests/FilesManagerOperatorsTest.cpp.o:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FilesManagerOperatorsTest.cpp.o
+.PHONY : CodeTests/FilesManagerOperatorsTest.cpp.o
+
+CodeTests/FilesManagerOperatorsTest.i: CodeTests/FilesManagerOperatorsTest.cpp.i
+
+.PHONY : CodeTests/FilesManagerOperatorsTest.i
+
+# target to preprocess a source file
+CodeTests/FilesManagerOperatorsTest.cpp.i:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FilesManagerOperatorsTest.cpp.i
+.PHONY : CodeTests/FilesManagerOperatorsTest.cpp.i
+
+CodeTests/FilesManagerOperatorsTest.s: CodeTests/FilesManagerOperatorsTest.cpp.s
+
+.PHONY : CodeTests/FilesManagerOperatorsTest.s
+
+# target to generate assembly for a file
+CodeTests/FilesManagerOperatorsTest.cpp.s:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FilesManagerOperatorsTest.cpp.s
+.PHONY : CodeTests/FilesManagerOperatorsTest.cpp.s
+
 CodeTests/FilesManagerTest.o: CodeTests/FilesManagerTest.cpp.o
 
 .PHONY : CodeTests/FilesManagerTest.o
@@ -420,6 +447,9 @@ help:
 	@echo "... CodeTests/FileTestVector.o"
 	@echo "... CodeTests/FileTestVector.i"
 	@echo "... CodeTests/FileTestVector.s"
+	@echo "... CodeTests/FilesManagerOperatorsTest.o"
+	@echo "... CodeTests/FilesManagerOperatorsTest.i"
+	@echo "... CodeTests/FilesManagerOperatorsTest.s"
 	@echo "... CodeTests/FilesManagerTest.o"
 	@echo "... CodeTests/FilesManagerTest.i"
 	@echo "... CodeTests/FilesManagerTest.s"

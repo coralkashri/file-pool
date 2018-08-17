@@ -9,8 +9,13 @@
 
 using namespace std;
 
-int main() {
-    File f("../Test/not_exist_file.bin");
+int mainExceptionsTest() {
+    File f("../Test/not_exist_file.bin", true);
     int n = 4;
-    f << rw_t<int>{&n, 1};
+    string err;
+    try {
+        f << rw_t<int>{&n, 1};
+    } catch (exception& e) {
+        cout << e.what() << endl;
+    }
 }

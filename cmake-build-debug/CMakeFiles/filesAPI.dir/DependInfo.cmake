@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/sherksecret/Projects/CLionProjects/filesApi/CodeTests/FileTestOpertorsNotVectors.cpp" "/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsNotVectors.cpp.o"
   "/home/sherksecret/Projects/CLionProjects/filesApi/CodeTests/FileTestOpertorsVectors.cpp" "/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsVectors.cpp.o"
   "/home/sherksecret/Projects/CLionProjects/filesApi/CodeTests/FileTestVector.cpp" "/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles/filesAPI.dir/CodeTests/FileTestVector.cpp.o"
+  "/home/sherksecret/Projects/CLionProjects/filesApi/CodeTests/FilesManagerOperatorsTest.cpp" "/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles/filesAPI.dir/CodeTests/FilesManagerOperatorsTest.cpp.o"
   "/home/sherksecret/Projects/CLionProjects/filesApi/CodeTests/FilesManagerTest.cpp" "/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.o"
   "/home/sherksecret/Projects/CLionProjects/filesApi/DesignText.cpp" "/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles/filesAPI.dir/DesignText.cpp.o"
   "/home/sherksecret/Projects/CLionProjects/filesApi/File.cpp" "/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles/filesAPI.dir/File.cpp.o"

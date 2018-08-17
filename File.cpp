@@ -1,10 +1,11 @@
 #include "File.h"
 #include "Exceptions.h"
 
-File::File(const std::string &file_name, const std::string &file_path) {
+File::File(const std::string &file_name, bool exceptions, const std::string &file_path) {
     name = file_name;
     path = file_path;
     is_ready = !name.empty();
+    use_exceptions = exceptions;
     is_open = false;
     file_mode = FileMode::OPEN_IN_ACTION;
     read_write_mode = ReadWriteMode::DONE;
@@ -40,9 +41,13 @@ void File::open(std::ios_base::openmode mode_flags, const FileAction &new_file_a
         file_ptr.open(path + name, mode_flags);
         if (file_ptr.fail()) {
             is_open = false;
-            // todo:: Check the flag's "use_exceptions" value.
-            std::cout << DesignText::make_colored("Error Opening file: " + path + name, DesignText::Color::RED, true) << std::endl;
-            throw FileOpenException(path + name);
+            if (!use_exceptions) {
+                std::cout
+                        << DesignText::make_colored("Error Opening file: " + path + name, DesignText::Color::RED, true)
+                        << std::endl;
+            } else {
+                throw FileOpenException(path + name);
+            }
         }
         is_open = true;
         std::cout << DesignText::make_colored("File has safely opened.", DesignText::Color::GREEN, false) << std::endl;

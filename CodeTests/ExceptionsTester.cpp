@@ -1,7 +1,3 @@
-//
-// Created by sherksecret on 8/15/18.
-//
-
 #include <iostream>
 #include <vector>
 #include <complex>

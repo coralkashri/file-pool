@@ -339,6 +339,33 @@ CodeTests/FilesManagerTest.cpp.s:
 	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.s
 .PHONY : CodeTests/FilesManagerTest.cpp.s
 
+CodeTests/README-Tests.o: CodeTests/README-Tests.cpp.o
+
+.PHONY : CodeTests/README-Tests.o
+
+# target to build an object file
+CodeTests/README-Tests.cpp.o:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/README-Tests.cpp.o
+.PHONY : CodeTests/README-Tests.cpp.o
+
+CodeTests/README-Tests.i: CodeTests/README-Tests.cpp.i
+
+.PHONY : CodeTests/README-Tests.i
+
+# target to preprocess a source file
+CodeTests/README-Tests.cpp.i:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/README-Tests.cpp.i
+.PHONY : CodeTests/README-Tests.cpp.i
+
+CodeTests/README-Tests.s: CodeTests/README-Tests.cpp.s
+
+.PHONY : CodeTests/README-Tests.s
+
+# target to generate assembly for a file
+CodeTests/README-Tests.cpp.s:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/README-Tests.cpp.s
+.PHONY : CodeTests/README-Tests.cpp.s
+
 src/Sources/File.o: src/Sources/File.cpp.o
 
 .PHONY : src/Sources/File.o
@@ -453,6 +480,9 @@ help:
 	@echo "... CodeTests/FilesManagerTest.o"
 	@echo "... CodeTests/FilesManagerTest.i"
 	@echo "... CodeTests/FilesManagerTest.s"
+	@echo "... CodeTests/README-Tests.o"
+	@echo "... CodeTests/README-Tests.i"
+	@echo "... CodeTests/README-Tests.s"
 	@echo "... src/Sources/File.o"
 	@echo "... src/Sources/File.i"
 	@echo "... src/Sources/File.s"

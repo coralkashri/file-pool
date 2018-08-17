@@ -1,5 +1,4 @@
 #include "../Headers/File.hpp"
-#include "../Utilities/Exceptions.hpp"
 
 namespace FilesApi {
     File::File(const std::string &file_name, bool exceptions, const std::string &file_path) {
@@ -33,9 +32,9 @@ namespace FilesApi {
             file_ptr.close();
             is_open = false;
             if (file_action != FileAction::NONE) {
-                std::cout << DesignText::make_colored(
-                        "Pay attention: file mission replaced by another one. (file closed)", DesignText::Color::RED,
-                        true) << std::endl;
+                std::cout
+                        << DesignText::make_colored("Pay attention: file mission replaced by another one. (file closed)",
+                                                    DesignText::Color::RED, false) << std::endl;
             }
         }
         file_action = new_file_action;
@@ -45,10 +44,8 @@ namespace FilesApi {
             if (file_ptr.fail()) {
                 is_open = false;
                 if (!use_exceptions) {
-                    std::cout
-                            << DesignText::make_colored("Error Opening file: " + path + name, DesignText::Color::RED,
-                                                        true)
-                            << std::endl;
+                    std::cout << DesignText::make_colored("Error Opening file: " + path + name,
+                                                        DesignText::Color::RED, true) << std::endl;
                 } else {
                     throw FileOpenException(path + name);
                 }
@@ -127,8 +124,13 @@ namespace FilesApi {
 
     bool File::is_file_ready(int) {
         if (!is_ready) {
-            std::cout << DesignText::make_colored("Pay attention: file name is empty. can't open this file.",
-                                                  DesignText::Color::RED, true) << std::endl;
+
+            if (!use_exceptions) {
+                std::cout << DesignText::make_colored("Pay attention: file name is empty. can't open this file.",
+                                                    DesignText::Color::RED, true) << std::endl;
+            } else {
+                throw FileNotReadyException();
+            }
             return false;
         }
         return true;

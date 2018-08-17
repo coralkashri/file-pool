@@ -19,6 +19,19 @@ namespace FilesApi {
             return what_message.c_str();
         }
     };
+
+    class FileNotReadyException : public std::runtime_error {
+        std::string what_message;
+
+    public:
+        explicit FileNotReadyException() : runtime_error("") {
+            what_message = "File name is empty. can't open this file.";
+        }
+
+        virtual const char *what() const throw() {
+            return what_message.c_str();
+        }
+    };
 }
 
 #endif //FILESAPI_EXCEPTIONS_H

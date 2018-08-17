@@ -6,6 +6,7 @@
 #include <map>
 #include <memory>
 #include "File.hpp"
+
 namespace FilesApi {
     using add_data = std::tuple<const std::string, const std::string>;
 
@@ -19,12 +20,33 @@ namespace FilesApi {
         void remove_unusable_files();
 
     public:
+        /**
+         * Ctor
+         * @param exceptions - Throw exceptions on errors Or use bold cout messages.
+         * @param max_files - Maximum files number to manage in this FilesManager object (0 for unlimited).
+         * @param files_path - if @param files_path == "" => in new file associate you will have to supply full
+         *                  file path, e.g: "path/to/file/filename.bin"
+         *                  else supply only file name, e.g: "filename.bin", if @param files_path == "path/to/file/"
+         */
         explicit FilesManager(bool exceptions = false, size_t max_files = 0, const std::string &files_path = "");
 
+        /**
+         * Add new file
+         * @param id - file id (will be use to get this File object).
+         * @param file - file's name or path (if @files_path == "").
+         */
         void add(const std::string &id, const std::string &file);
 
+        /**
+         * Remove file
+         * @param id - file's id
+         */
         void remove(const std::string &id);
 
+        /**
+         * Get file
+         * @param id - file's id
+         */
         File &get(const std::string &id);
 
         /**

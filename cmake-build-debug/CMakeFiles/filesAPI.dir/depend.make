@@ -4,36 +4,50 @@
 CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.o: ../CodeTests/ComplexDataStructureTest.cpp
 CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.o: ../src/Headers/File.hpp
 CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.o: ../src/Utilities/DesignText.hpp
+CMakeFiles/filesAPI.dir/CodeTests/ComplexDataStructureTest.cpp.o: ../src/Utilities/Exceptions.hpp
 
 CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.o: ../CodeTests/ExceptionsTester.cpp
 CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.o: ../src/Headers/File.hpp
 CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.o: ../src/Utilities/DesignText.hpp
+CMakeFiles/filesAPI.dir/CodeTests/ExceptionsTester.cpp.o: ../src/Utilities/Exceptions.hpp
 
 CMakeFiles/filesAPI.dir/CodeTests/FileTestNotVector.cpp.o: ../CodeTests/FileTestNotVector.cpp
 CMakeFiles/filesAPI.dir/CodeTests/FileTestNotVector.cpp.o: ../src/Headers/File.hpp
 CMakeFiles/filesAPI.dir/CodeTests/FileTestNotVector.cpp.o: ../src/Utilities/DesignText.hpp
+CMakeFiles/filesAPI.dir/CodeTests/FileTestNotVector.cpp.o: ../src/Utilities/Exceptions.hpp
 
 CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsNotVectors.cpp.o: ../CodeTests/FileTestOpertorsNotVectors.cpp
 CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsNotVectors.cpp.o: ../src/Headers/File.hpp
 CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsNotVectors.cpp.o: ../src/Utilities/DesignText.hpp
+CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsNotVectors.cpp.o: ../src/Utilities/Exceptions.hpp
 
 CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsVectors.cpp.o: ../CodeTests/FileTestOpertorsVectors.cpp
 CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsVectors.cpp.o: ../src/Headers/File.hpp
 CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsVectors.cpp.o: ../src/Utilities/DesignText.hpp
+CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsVectors.cpp.o: ../src/Utilities/Exceptions.hpp
 
 CMakeFiles/filesAPI.dir/CodeTests/FileTestVector.cpp.o: ../CodeTests/FileTestVector.cpp
 CMakeFiles/filesAPI.dir/CodeTests/FileTestVector.cpp.o: ../src/Headers/File.hpp
 CMakeFiles/filesAPI.dir/CodeTests/FileTestVector.cpp.o: ../src/Utilities/DesignText.hpp
+CMakeFiles/filesAPI.dir/CodeTests/FileTestVector.cpp.o: ../src/Utilities/Exceptions.hpp
 
 CMakeFiles/filesAPI.dir/CodeTests/FilesManagerOperatorsTest.cpp.o: ../CodeTests/FilesManagerOperatorsTest.cpp
 CMakeFiles/filesAPI.dir/CodeTests/FilesManagerOperatorsTest.cpp.o: ../src/Headers/File.hpp
 CMakeFiles/filesAPI.dir/CodeTests/FilesManagerOperatorsTest.cpp.o: ../src/Headers/FilesManager.hpp
 CMakeFiles/filesAPI.dir/CodeTests/FilesManagerOperatorsTest.cpp.o: ../src/Utilities/DesignText.hpp
+CMakeFiles/filesAPI.dir/CodeTests/FilesManagerOperatorsTest.cpp.o: ../src/Utilities/Exceptions.hpp
 
 CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.o: ../CodeTests/FilesManagerTest.cpp
 CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.o: ../src/Headers/File.hpp
 CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.o: ../src/Headers/FilesManager.hpp
 CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.o: ../src/Utilities/DesignText.hpp
+CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.o: ../src/Utilities/Exceptions.hpp
+
+CMakeFiles/filesAPI.dir/CodeTests/README-Tests.cpp.o: ../CodeTests/README-Tests.cpp
+CMakeFiles/filesAPI.dir/CodeTests/README-Tests.cpp.o: ../src/Headers/File.hpp
+CMakeFiles/filesAPI.dir/CodeTests/README-Tests.cpp.o: ../src/Headers/FilesManager.hpp
+CMakeFiles/filesAPI.dir/CodeTests/README-Tests.cpp.o: ../src/Utilities/DesignText.hpp
+CMakeFiles/filesAPI.dir/CodeTests/README-Tests.cpp.o: ../src/Utilities/Exceptions.hpp
 
 CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o: ../src/Headers/File.hpp
 CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o: ../src/Sources/File.cpp
@@ -44,6 +58,7 @@ CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o: ../src/Headers/File.hpp
 CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o: ../src/Headers/FilesManager.hpp
 CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o: ../src/Sources/FilesManager.cpp
 CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o: ../src/Utilities/DesignText.hpp
+CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o: ../src/Utilities/Exceptions.hpp
 
 CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o: ../src/Utilities/DesignText.cpp
 CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o: ../src/Utilities/DesignText.hpp

@@ -108,6 +108,9 @@
 		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/CodeTests/FilesManagerTest.cpp">
 			<Option target="filesAPI"/>
 		</Unit>
+		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/CodeTests/README-Tests.cpp">
+			<Option target="filesAPI"/>
+		</Unit>
 		<Unit filename="/home/sherksecret/Projects/CLionProjects/filesApi/src/Headers/File.hpp">
 			<Option target="filesAPI"/>
 		</Unit>

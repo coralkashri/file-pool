@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/filesAPI.dir/CodeTests/FileTestVector.cpp.o"
-  "CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o"
-  "CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o"
-  "CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o"
+  "CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.o"
+  "CMakeFiles/filesAPI.dir/src/sources/File.cpp.o"
+  "CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.o"
   "CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.o"
   "CMakeFiles/filesAPI.dir/CodeTests/FileTestNotVector.cpp.o"
   "CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsVectors.cpp.o"

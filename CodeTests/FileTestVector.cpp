@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <complex>
-#include "../src/Headers/File.hpp"
+#include "../src/headers/File.hpp"
 
 using namespace std;
 using namespace FilesApi;

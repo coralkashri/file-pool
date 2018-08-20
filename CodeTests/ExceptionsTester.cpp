@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <complex>
-#include "../src/Headers/File.hpp"
+#include "../src/headers/File.hpp"
 
 using namespace std;
 using namespace FilesApi;
@@ -11,7 +11,7 @@ int mainExceptionsTest() {
     int n = 4;
     string err;
     try {
-        f << rw_t<int>{&n, 1};
+        f << rw_soft(n);
     } catch (exception& e) {
         cout << e.what() << endl;
     }

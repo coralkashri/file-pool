@@ -31,11 +31,19 @@ fm["fileID"] = "../TestFiles/test_file.bin";
 Write data
 ```cpp
 int a = 12, b;
-fm["fileID"] << rw_t<int>(&a, 1);
+//Option 1
+fm["fileID"] << rw_s<int>(&a/*, 1 <default is 1>*/);
+//Option 2
+fm["fileID"] << rw_s<int>(a);
+//Option 3
+fm["fileID"] << rw_soft(&a);
+//Option 4 (Recommended)
+fm["fileID"] << rw_soft(a);
 ```
 Read data
 ```cpp
-fm["fileID"] >> rw_t<int>(&b, 1);
+// As same as Write, but with operator >>
+fm["fileID"] >> rw_soft(b);
 cout << b << endl; // 12
 ```
 
@@ -64,9 +72,9 @@ Write/Read methods
 ```cpp
 int a = 12;
 int b;
-fm.get("5") << rw_t<int>(&a, 1); // Work
+fm.get("5") << rw_soft(a); // Work
 fm.get("5").write(&a); // Work
-fm.get("5") >> rw_t<int>(&b, 1); // Work
+fm.get("5") >> rw_soft(b); // Work
 cout << b << endl; // Prints 12
 ```
 Remove file from manager
@@ -75,9 +83,9 @@ fm.remove("5");
 ```
 Try Write/Read methods
 ```cpp
-fm.get("5") << rw_t<int>(&a, 1); // Error
+fm.get("5") << rw_soft(a); // Error
 fm.get("5").write(&a); // Error
-fm.get("5") >> rw_t<int>(&b, 1); // Error
+fm.get("5") >> rw_soft(b); // Error
 ```
 
 #### Simple use - remove file from manager object using operators
@@ -97,17 +105,25 @@ Write data to file
 fm["2"].init_read_write_mode(ReadWriteMode::MULTIPLE);
 const size_t array_size = 100;
 for (size_t i = 0; i < array_size; i++) {
-    fm["2"].write(&i);
+    fm["2"] << rw_soft(i);
 }
 ```
 Read data to array
 ```cpp
-int b[array_size];
+size_t b[array_size];
 fm["2"].init_read_write_mode(ReadWriteMode::SINGLE_AND_DONE);
-fm["2"] >> rw_t<int>(b, array_size);
+// Option 1
+fm["2"] >> rw_soft(b, array_size);
+// Option 2
+fm["2"] >> rw_soft(*b, array_size);
+// Option 3
+fm["2"] >> rw_soft(b[0], array_size);
+// Option 4 - Read with offset from the array
+size_t offset = 5;
+fm["2"] >> rw_soft(b[offset], array_size - offset);
 for (size_t i = 0; i < array_size; i++) {
     cout << b[i] << " ";
-} // 0...99
+} // 0...99 (Or with offset - 0...(99-offset))
 ```
 Read data to vector
 ```cpp

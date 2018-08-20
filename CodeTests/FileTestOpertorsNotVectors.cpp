@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <complex>
-#include "../src/Headers/File.hpp"
+#include "../src/headers/File.hpp"
 
 using namespace std;
 using namespace FilesApi;
@@ -16,12 +16,13 @@ int mainFileTestOpertorsNotVectors() {
 
     f.init_read_write_mode(ReadWriteMode::MULTIPLE);
     for (size_t i = 0; i < size; i++) {
-        f << rw_t<int>(&wdata, 1);
+        f << rw_soft(wdata);
         wdata += 10;
     }
 
     f.init_read_write_mode(ReadWriteMode::SINGLE_AND_DONE);
-    f >> rw_t<int>(rdata, size);
+    size_t offset = 0;
+    f >> rw_soft(rdata[offset], size - offset);
     f.close();
 
     for (size_t i = 0; i < size; i++) {

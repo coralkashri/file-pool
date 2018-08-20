@@ -366,86 +366,86 @@ CodeTests/README-Tests.cpp.s:
 	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/CodeTests/README-Tests.cpp.s
 .PHONY : CodeTests/README-Tests.cpp.s
 
-src/Sources/File.o: src/Sources/File.cpp.o
+src/sources/File.o: src/sources/File.cpp.o
 
-.PHONY : src/Sources/File.o
-
-# target to build an object file
-src/Sources/File.cpp.o:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o
-.PHONY : src/Sources/File.cpp.o
-
-src/Sources/File.i: src/Sources/File.cpp.i
-
-.PHONY : src/Sources/File.i
-
-# target to preprocess a source file
-src/Sources/File.cpp.i:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Sources/File.cpp.i
-.PHONY : src/Sources/File.cpp.i
-
-src/Sources/File.s: src/Sources/File.cpp.s
-
-.PHONY : src/Sources/File.s
-
-# target to generate assembly for a file
-src/Sources/File.cpp.s:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Sources/File.cpp.s
-.PHONY : src/Sources/File.cpp.s
-
-src/Sources/FilesManager.o: src/Sources/FilesManager.cpp.o
-
-.PHONY : src/Sources/FilesManager.o
+.PHONY : src/sources/File.o
 
 # target to build an object file
-src/Sources/FilesManager.cpp.o:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o
-.PHONY : src/Sources/FilesManager.cpp.o
+src/sources/File.cpp.o:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/sources/File.cpp.o
+.PHONY : src/sources/File.cpp.o
 
-src/Sources/FilesManager.i: src/Sources/FilesManager.cpp.i
+src/sources/File.i: src/sources/File.cpp.i
 
-.PHONY : src/Sources/FilesManager.i
+.PHONY : src/sources/File.i
 
 # target to preprocess a source file
-src/Sources/FilesManager.cpp.i:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.i
-.PHONY : src/Sources/FilesManager.cpp.i
+src/sources/File.cpp.i:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/sources/File.cpp.i
+.PHONY : src/sources/File.cpp.i
 
-src/Sources/FilesManager.s: src/Sources/FilesManager.cpp.s
+src/sources/File.s: src/sources/File.cpp.s
 
-.PHONY : src/Sources/FilesManager.s
+.PHONY : src/sources/File.s
 
 # target to generate assembly for a file
-src/Sources/FilesManager.cpp.s:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.s
-.PHONY : src/Sources/FilesManager.cpp.s
+src/sources/File.cpp.s:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/sources/File.cpp.s
+.PHONY : src/sources/File.cpp.s
 
-src/Utilities/DesignText.o: src/Utilities/DesignText.cpp.o
+src/sources/FilesManager.o: src/sources/FilesManager.cpp.o
 
-.PHONY : src/Utilities/DesignText.o
+.PHONY : src/sources/FilesManager.o
 
 # target to build an object file
-src/Utilities/DesignText.cpp.o:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o
-.PHONY : src/Utilities/DesignText.cpp.o
+src/sources/FilesManager.cpp.o:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.o
+.PHONY : src/sources/FilesManager.cpp.o
 
-src/Utilities/DesignText.i: src/Utilities/DesignText.cpp.i
+src/sources/FilesManager.i: src/sources/FilesManager.cpp.i
 
-.PHONY : src/Utilities/DesignText.i
+.PHONY : src/sources/FilesManager.i
 
 # target to preprocess a source file
-src/Utilities/DesignText.cpp.i:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.i
-.PHONY : src/Utilities/DesignText.cpp.i
+src/sources/FilesManager.cpp.i:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.i
+.PHONY : src/sources/FilesManager.cpp.i
 
-src/Utilities/DesignText.s: src/Utilities/DesignText.cpp.s
+src/sources/FilesManager.s: src/sources/FilesManager.cpp.s
 
-.PHONY : src/Utilities/DesignText.s
+.PHONY : src/sources/FilesManager.s
 
 # target to generate assembly for a file
-src/Utilities/DesignText.cpp.s:
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.s
-.PHONY : src/Utilities/DesignText.cpp.s
+src/sources/FilesManager.cpp.s:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.s
+.PHONY : src/sources/FilesManager.cpp.s
+
+src/utilities/DesignText.o: src/utilities/DesignText.cpp.o
+
+.PHONY : src/utilities/DesignText.o
+
+# target to build an object file
+src/utilities/DesignText.cpp.o:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.o
+.PHONY : src/utilities/DesignText.cpp.o
+
+src/utilities/DesignText.i: src/utilities/DesignText.cpp.i
+
+.PHONY : src/utilities/DesignText.i
+
+# target to preprocess a source file
+src/utilities/DesignText.cpp.i:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.i
+.PHONY : src/utilities/DesignText.cpp.i
+
+src/utilities/DesignText.s: src/utilities/DesignText.cpp.s
+
+.PHONY : src/utilities/DesignText.s
+
+# target to generate assembly for a file
+src/utilities/DesignText.cpp.s:
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.s
+.PHONY : src/utilities/DesignText.cpp.s
 
 # Help Target
 help:
@@ -483,15 +483,15 @@ help:
 	@echo "... CodeTests/README-Tests.o"
 	@echo "... CodeTests/README-Tests.i"
 	@echo "... CodeTests/README-Tests.s"
-	@echo "... src/Sources/File.o"
-	@echo "... src/Sources/File.i"
-	@echo "... src/Sources/File.s"
-	@echo "... src/Sources/FilesManager.o"
-	@echo "... src/Sources/FilesManager.i"
-	@echo "... src/Sources/FilesManager.s"
-	@echo "... src/Utilities/DesignText.o"
-	@echo "... src/Utilities/DesignText.i"
-	@echo "... src/Utilities/DesignText.s"
+	@echo "... src/sources/File.o"
+	@echo "... src/sources/File.i"
+	@echo "... src/sources/File.s"
+	@echo "... src/sources/FilesManager.o"
+	@echo "... src/sources/FilesManager.i"
+	@echo "... src/sources/FilesManager.s"
+	@echo "... src/utilities/DesignText.o"
+	@echo "... src/utilities/DesignText.i"
+	@echo "... src/utilities/DesignText.s"
 .PHONY : help
 
 

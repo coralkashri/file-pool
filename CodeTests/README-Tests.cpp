@@ -1,12 +1,12 @@
 #include <iostream>
 #include <vector>
 #include <complex>
-#include "../src/Headers/FilesManager.hpp"
+#include "../src/headers/FilesManager.hpp"
 
 using namespace std;
 using namespace FilesApi;
 
-int main() {
+int main/*README_Tests*/() {
     /// Simple use - write and read single simple value using operators
     /*FilesManager fm;
     fm.add("fileID", "../TestFiles/test_file.bin");
@@ -19,8 +19,12 @@ int main() {
     /*FilesManager fm;
     fm["fileID"] = "../TestFiles/test_file.bin";
     int a = 12, b;
-    fm["fileID"] << rw_t<int>(&a, 1);
-    fm["fileID"] >> rw_t<int>(&b, 1);
+    //fm["fileID"] << rw_s<int>(&a, 1);
+    //fm["fileID"] << rw_soft(&a, 1);
+    fm["fileID"] << rw_soft(a, 1);
+    //fm["fileID"] >> rw_s<int>(&b, 1);
+    //fm["fileID"] >> rw_soft(&b, 1);
+    fm["fileID"] >> rw_soft(b, 1);
     cout << b << endl; // 12*/
 
     /// Simple use - write and read single vector using operators
@@ -40,15 +44,15 @@ int main() {
     fm += add_data("5", "test_file.bin");
     int a = 12;
     int b;
-    fm.get("5") << rw_t<int>(&a, 1); // Work
+    fm.get("5") << rw_soft(a); // Work
     fm.get("5").write(&a); // Work
-    fm.get("5") >> rw_t<int>(&b, 1); // Work
+    fm.get("5") >> rw_soft(b); // Work
     cout << b << endl; // Prints 12
     //fm.remove("5"); // Remove the file from collection
     fm -= "5"; // Remove the file from collection
-    fm.get("5") << rw_t<int>(&a, 1); // Error
+    fm.get("5") << rw_soft(a); // Error
     fm.get("5").write(&a); // Error
-    fm.get("5") >> rw_t<int>(&b, 1); // Error*/
+    fm.get("5") >> rw_soft(b); // Error*/
 
     /// Use case - Insert multiple data to file and read into array
     /*FilesManager fm(false, 0, "../TestFiles/");
@@ -60,10 +64,22 @@ int main() {
     }
     size_t b[array_size];
     fm["2"].init_read_write_mode(ReadWriteMode::SINGLE_AND_DONE);
-    fm["2"] >> rw_t<size_t>(b, array_size);
+    // Option 1
+    //fm["2"] >> rw_soft(b, array_size);
+    // Option 2
+    //fm["2"] >> rw_soft(*b, array_size);
+    // Option 3
+    //fm["2"] >> rw_soft(b[0], array_size);
+    // Option 4 - Read with offset from the array
+    size_t offset = 5;
+    for (size_t i = 0; i < offset; i++) {
+        /// Fill the offset places in the array ahead, and see that they stay as they are.
+        b[offset - i - 1] = array_size - 1 - i;
+    }
+    fm["2"] >> rw_soft(b[offset], array_size - offset);
     for (size_t i = 0; i < array_size; i++) {
         cout << b[i] << " ";
-    }
+    } // 0...99 (Or with offset - 0...(99-offset))
     cout << endl;
     vector<size_t> c(array_size);
     fm["2"] >> c;

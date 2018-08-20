@@ -81,76 +81,76 @@ CMakeFiles/filesAPI.dir/CodeTests/FileTestVector.cpp.o.provides: CMakeFiles/file
 CMakeFiles/filesAPI.dir/CodeTests/FileTestVector.cpp.o.provides.build: CMakeFiles/filesAPI.dir/CodeTests/FileTestVector.cpp.o
 
 
-CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o: CMakeFiles/filesAPI.dir/flags.make
-CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o: ../src/Sources/FilesManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o -c /home/sherksecret/Projects/CLionProjects/filesApi/src/Sources/FilesManager.cpp
+CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.o: CMakeFiles/filesAPI.dir/flags.make
+CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.o: ../src/sources/FilesManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.o -c /home/sherksecret/Projects/CLionProjects/filesApi/src/sources/FilesManager.cpp
 
-CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sherksecret/Projects/CLionProjects/filesApi/src/Sources/FilesManager.cpp > CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.i
+CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sherksecret/Projects/CLionProjects/filesApi/src/sources/FilesManager.cpp > CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.i
 
-CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sherksecret/Projects/CLionProjects/filesApi/src/Sources/FilesManager.cpp -o CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.s
+CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sherksecret/Projects/CLionProjects/filesApi/src/sources/FilesManager.cpp -o CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.s
 
-CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o.requires:
+CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.o.requires:
 
-.PHONY : CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o.requires
+.PHONY : CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.o.requires
 
-CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o.provides: CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o.requires
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o.provides.build
-.PHONY : CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o.provides
+CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.o.provides: CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.o.requires
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.o.provides.build
+.PHONY : CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.o.provides
 
-CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o.provides.build: CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o
-
-
-CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o: CMakeFiles/filesAPI.dir/flags.make
-CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o: ../src/Sources/File.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o -c /home/sherksecret/Projects/CLionProjects/filesApi/src/Sources/File.cpp
-
-CMakeFiles/filesAPI.dir/src/Sources/File.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/filesAPI.dir/src/Sources/File.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sherksecret/Projects/CLionProjects/filesApi/src/Sources/File.cpp > CMakeFiles/filesAPI.dir/src/Sources/File.cpp.i
-
-CMakeFiles/filesAPI.dir/src/Sources/File.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/filesAPI.dir/src/Sources/File.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sherksecret/Projects/CLionProjects/filesApi/src/Sources/File.cpp -o CMakeFiles/filesAPI.dir/src/Sources/File.cpp.s
-
-CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o.requires:
-
-.PHONY : CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o.requires
-
-CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o.provides: CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o.requires
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o.provides.build
-.PHONY : CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o.provides
-
-CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o.provides.build: CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o
+CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.o.provides.build: CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.o
 
 
-CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o: CMakeFiles/filesAPI.dir/flags.make
-CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o: ../src/Utilities/DesignText.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o -c /home/sherksecret/Projects/CLionProjects/filesApi/src/Utilities/DesignText.cpp
+CMakeFiles/filesAPI.dir/src/sources/File.cpp.o: CMakeFiles/filesAPI.dir/flags.make
+CMakeFiles/filesAPI.dir/src/sources/File.cpp.o: ../src/sources/File.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/filesAPI.dir/src/sources/File.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/filesAPI.dir/src/sources/File.cpp.o -c /home/sherksecret/Projects/CLionProjects/filesApi/src/sources/File.cpp
 
-CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sherksecret/Projects/CLionProjects/filesApi/src/Utilities/DesignText.cpp > CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.i
+CMakeFiles/filesAPI.dir/src/sources/File.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/filesAPI.dir/src/sources/File.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sherksecret/Projects/CLionProjects/filesApi/src/sources/File.cpp > CMakeFiles/filesAPI.dir/src/sources/File.cpp.i
 
-CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sherksecret/Projects/CLionProjects/filesApi/src/Utilities/DesignText.cpp -o CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.s
+CMakeFiles/filesAPI.dir/src/sources/File.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/filesAPI.dir/src/sources/File.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sherksecret/Projects/CLionProjects/filesApi/src/sources/File.cpp -o CMakeFiles/filesAPI.dir/src/sources/File.cpp.s
 
-CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o.requires:
+CMakeFiles/filesAPI.dir/src/sources/File.cpp.o.requires:
 
-.PHONY : CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o.requires
+.PHONY : CMakeFiles/filesAPI.dir/src/sources/File.cpp.o.requires
 
-CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o.provides: CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o.requires
-	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o.provides.build
-.PHONY : CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o.provides
+CMakeFiles/filesAPI.dir/src/sources/File.cpp.o.provides: CMakeFiles/filesAPI.dir/src/sources/File.cpp.o.requires
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/sources/File.cpp.o.provides.build
+.PHONY : CMakeFiles/filesAPI.dir/src/sources/File.cpp.o.provides
 
-CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o.provides.build: CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o
+CMakeFiles/filesAPI.dir/src/sources/File.cpp.o.provides.build: CMakeFiles/filesAPI.dir/src/sources/File.cpp.o
+
+
+CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.o: CMakeFiles/filesAPI.dir/flags.make
+CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.o: ../src/utilities/DesignText.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sherksecret/Projects/CLionProjects/filesApi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.o -c /home/sherksecret/Projects/CLionProjects/filesApi/src/utilities/DesignText.cpp
+
+CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sherksecret/Projects/CLionProjects/filesApi/src/utilities/DesignText.cpp > CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.i
+
+CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sherksecret/Projects/CLionProjects/filesApi/src/utilities/DesignText.cpp -o CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.s
+
+CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.o.requires:
+
+.PHONY : CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.o.requires
+
+CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.o.provides: CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.o.requires
+	$(MAKE) -f CMakeFiles/filesAPI.dir/build.make CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.o.provides.build
+.PHONY : CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.o.provides
+
+CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.o.provides.build: CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.o
 
 
 CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.o: CMakeFiles/filesAPI.dir/flags.make
@@ -348,9 +348,9 @@ CMakeFiles/filesAPI.dir/CodeTests/README-Tests.cpp.o.provides.build: CMakeFiles/
 # Object files for target filesAPI
 filesAPI_OBJECTS = \
 "CMakeFiles/filesAPI.dir/CodeTests/FileTestVector.cpp.o" \
-"CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o" \
-"CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o" \
-"CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o" \
+"CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.o" \
+"CMakeFiles/filesAPI.dir/src/sources/File.cpp.o" \
+"CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.o" \
 "CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.o" \
 "CMakeFiles/filesAPI.dir/CodeTests/FileTestNotVector.cpp.o" \
 "CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsVectors.cpp.o" \
@@ -364,9 +364,9 @@ filesAPI_OBJECTS = \
 filesAPI_EXTERNAL_OBJECTS =
 
 filesAPI: CMakeFiles/filesAPI.dir/CodeTests/FileTestVector.cpp.o
-filesAPI: CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o
-filesAPI: CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o
-filesAPI: CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o
+filesAPI: CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.o
+filesAPI: CMakeFiles/filesAPI.dir/src/sources/File.cpp.o
+filesAPI: CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.o
 filesAPI: CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.o
 filesAPI: CMakeFiles/filesAPI.dir/CodeTests/FileTestNotVector.cpp.o
 filesAPI: CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsVectors.cpp.o
@@ -386,9 +386,9 @@ CMakeFiles/filesAPI.dir/build: filesAPI
 .PHONY : CMakeFiles/filesAPI.dir/build
 
 CMakeFiles/filesAPI.dir/requires: CMakeFiles/filesAPI.dir/CodeTests/FileTestVector.cpp.o.requires
-CMakeFiles/filesAPI.dir/requires: CMakeFiles/filesAPI.dir/src/Sources/FilesManager.cpp.o.requires
-CMakeFiles/filesAPI.dir/requires: CMakeFiles/filesAPI.dir/src/Sources/File.cpp.o.requires
-CMakeFiles/filesAPI.dir/requires: CMakeFiles/filesAPI.dir/src/Utilities/DesignText.cpp.o.requires
+CMakeFiles/filesAPI.dir/requires: CMakeFiles/filesAPI.dir/src/sources/FilesManager.cpp.o.requires
+CMakeFiles/filesAPI.dir/requires: CMakeFiles/filesAPI.dir/src/sources/File.cpp.o.requires
+CMakeFiles/filesAPI.dir/requires: CMakeFiles/filesAPI.dir/src/utilities/DesignText.cpp.o.requires
 CMakeFiles/filesAPI.dir/requires: CMakeFiles/filesAPI.dir/CodeTests/FilesManagerTest.cpp.o.requires
 CMakeFiles/filesAPI.dir/requires: CMakeFiles/filesAPI.dir/CodeTests/FileTestNotVector.cpp.o.requires
 CMakeFiles/filesAPI.dir/requires: CMakeFiles/filesAPI.dir/CodeTests/FileTestOpertorsVectors.cpp.o.requires

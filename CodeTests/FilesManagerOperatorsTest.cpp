@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <complex>
-#include "../src/Headers/FilesManager.hpp"
+#include "../src/headers/FilesManager.hpp"
 
 using namespace std;
 using namespace FilesApi;
@@ -24,15 +24,15 @@ int mainFilesManagerOperatorsTest() {
     fm += add_data("5", files[1]); // Add file to collection
     int a = 12;
     int b;
-    fm["5"] << rw_t<int>(&a, 1); // Work
+    fm["5"] << rw_soft(a); // Work
     fm["5"].write(&a); // Work
-    fm["5"] >> rw_t<int>(&b, 1); // Work
+    fm["5"] >> rw_soft(b); // Work
     cout << b << endl; // Prints 12
 
     fm -= "5"; // Remove the file from collection
-    fm["5"] << rw_t<int>(&a, 1); // Error
+    fm["5"] << rw_soft(a); // Error
     fm["5"].write(&a); // Error
-    fm["5"] >> rw_t<int>(&b, 1); // Error
+    fm["5"] >> rw_soft(b); // Error
 
     //fm["2"] = files[1];
     fm += add_data("2", files[1]);

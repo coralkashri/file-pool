@@ -5,13 +5,38 @@
 #include <mutex>
 #include <fstream>
 #include <vector>
-#include "../Utilities/DesignText.hpp"
-#include "../Utilities/Exceptions.hpp"
+#include <boost/assert.hpp>
+#include "../utilities/DesignText.hpp"
+#include "../utilities/Exceptions.hpp"
 
 namespace FilesApi {
 
     /// Use in read/write for non-vectors overload operator. e.g: file >> rw_t<T>{val, 1};
-    template<typename T> using rw_t = std::tuple<T *, const size_t>;
+    template<typename T> struct rw_s {
+        T*          val;
+        size_t      val_size;
+
+        rw_s(T &value, size_t arr_size = 1) : val(&value), val_size(arr_size) {
+            assert(arr_size > 0);
+
+        }
+
+        rw_s(T *value, size_t arr_size = 1) : val(value), val_size(arr_size) {
+            assert(arr_size > 0);
+            assert(value != nullptr);
+        }
+    };
+
+    /// Wrapper function for creation of rw_t object, without need for specify the type after the function name
+    /// Instead of call:    f << rw_t<int>(a, size);
+    /// Call:               f << rw_soft(a, size);
+    template<typename T> rw_s<T> rw_soft(T &value, size_t arr_size = 1) {
+        return rw_s<T>(value, arr_size);
+    }
+
+    template<typename T> rw_s<T> rw_soft(T *value, size_t arr_size = 1) {
+        return rw_soft(*value, arr_size);
+    }
 
     /**
      * >> if file_mode is OPEN_IN_ACTION:
@@ -181,7 +206,7 @@ namespace FilesApi {
         /**
          * Read to vector
          * \tparam T - vector type
-         * \param info - tuple(0)=> vector to read into, tuple(1)=> in case of array- array's size (else write 1)
+         * \param data - vector to read into
          * \return this File object.
          */
         template<class T>
@@ -190,29 +215,35 @@ namespace FilesApi {
         /**
          * Read to non-vector
          * \tparam T - variable type
-         * \param info - tuple(0)=> variable non-vector to read into, tuple(1)=> in case of array- array's size (else write 1)
+         * \param info - {
+         *                  val - variable non-vector to read into
+         *                  val_size - in case of array- array's size (else leave as default 1)
+         *               }
          * \return this File object
          */
         template<class T>
-        File &operator>>(const rw_t<T> &info);
+        File &operator>>(const rw_s<T> &info);
 
         /**
          * Write vector to file
          * \tparam T - vector type
-         * \param info - tuple(0)=> vector to write, tuple(1)=> in case of array- array's size (else write 1)
+         * \param data - vector to write
          * \return this File object
          */
         template<class T>
-        File &operator<<(const std::vector<T> &info);
+        File &operator<<(const std::vector<T> &data);
 
         /**
          * Write non-vector to file
          * \tparam T - variable type
-         * \param info - tuple(0)=> variable non-vector to read into, tuple(1)=> in case of array- array's size (else write 1)
+         * \param info - {
+         *                  val - variable non-vector to write
+         *                  val_size - in case of array- array's size (else leave as default 1)
+         *               }
          * \return this File object
          */
         template<class T>
-        File &operator<<(const rw_t<T> &info);
+        File &operator<<(const rw_s<T> &info);
     };
 
     template<class T>
@@ -277,8 +308,8 @@ namespace FilesApi {
     }
 
     template<class T>
-    File &File::operator>>(const rw_t<T> &info) {
-        return read(std::get<0>(info), std::get<1>(info));
+    File &File::operator>>(const rw_s<T> &info) {
+        return read(info.val, info.val_size);
     }
 
     template<class T>
@@ -287,8 +318,8 @@ namespace FilesApi {
     }
 
     template<class T>
-    File &File::operator<<(const rw_t<T> &info) {
-        return write(std::get<0>(info), std::get<1>(info));
+    File &File::operator<<(const rw_s<T> &info) {
+        return write(info.val, info.val_size);
     }
 }
 

@@ -121,8 +121,8 @@ fm["2"] >> rw_soft(b[0], array_size);
 // Option 4 - Read with offset from the array
 size_t offset = 5;
 fm["2"] >> rw_soft(b[offset], array_size - offset);
-for (size_t i = 0; i < array_size; i++) {
-    cout << b[i] << " ";
+for (size_t i = 0; i < array_size - offset; i++) {
+    cout << b[offset + i] << " ";
 } // 0...99 (Or with offset - 0...(99-offset))
 ```
 Read data to vector

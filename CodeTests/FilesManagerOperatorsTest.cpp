@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <complex>
-#include "../src/headers/FilesManager.hpp"
+#include "../src/FilesManager.hpp"
 
 using namespace std;
 using namespace FilesApi;

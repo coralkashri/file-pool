@@ -1,4 +1,4 @@
-#include "../headers/FilesManager.hpp"
+#include "FilesManager.hpp"
 
 namespace FilesApi {
     FilesManager::FilesManager(bool exceptions, size_t max_files, const std::string &files_path)

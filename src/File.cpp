@@ -1,4 +1,4 @@
-#include "../headers/File.hpp"
+#include "File.hpp"
 
 namespace FilesApi {
     File::File(const std::string &file_name, bool exceptions, const std::string &file_path) {

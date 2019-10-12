@@ -6,8 +6,8 @@
 #include <fstream>
 #include <vector>
 #include <boost/assert.hpp>
-#include "../utilities/DesignText.hpp"
-#include "../utilities/Exceptions.hpp"
+#include "utilities/DesignText.hpp"
+#include "utilities/Exceptions.hpp"
 
 namespace FilesApi {
 

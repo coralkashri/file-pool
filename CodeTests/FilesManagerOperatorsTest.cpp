@@ -17,9 +17,9 @@ int mainFilesManagerOperatorsTest() {
 
     fm["1"].init_read_write_mode(ReadWriteMode::SINGLE_AND_DONE);
     //fm.get("1").write(wdata.data(), wdata.size()); // Use it as complex<float> array. Possible.
-    fm["1"].write(wdata);
+    fm["1"].write(wdata, wdata.size());
     fm["1"].init_read_write_mode(ReadWriteMode::SINGLE_AND_DONE);
-    fm["1"].read(rdata);
+    fm["1"].read(rdata, rdata.size());
 
     fm += add_data("5", files[1]); // Add file to collection
     int a = 12;

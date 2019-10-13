@@ -12,11 +12,11 @@ int mainFileTestVector() {
     vector<complex<float>> rdata(wdata.size());
 
     f.init_read_write_mode(ReadWriteMode::MULTIPLE, 2);
-    f.write(wdata);
-    f.write(wdata);
+    f.write(wdata, wdata.size());
+    f.write(wdata, wdata.size());
     f.init_read_write_mode(ReadWriteMode::MULTIPLE);
-    f.read(rdata);
-    f.read(rdata);
+    f.read(rdata, rdata.size());
+    f.read(rdata, rdata.size());
 
     for (size_t i = 0; i < rdata.size(); i++) {
         cout << rdata[i] << endl;

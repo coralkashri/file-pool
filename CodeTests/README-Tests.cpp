@@ -6,7 +6,7 @@
 using namespace std;
 using namespace FilesApi;
 
-int main/*README_Tests*/() {
+int mainREADME_Tests() {
     /// Simple use - write and read single simple value using operators
     /*FilesManager fm;
     fm.add("fileID", "../TestFiles/test_file.bin");

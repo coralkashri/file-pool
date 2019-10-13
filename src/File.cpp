@@ -1,21 +1,12 @@
 #include "File.hpp"
 
 namespace FilesApi {
-    File::File(const std::string &file_name, bool exceptions, const std::string &file_path) {
-        name = file_name;
-        path = file_path;
-        is_ready = !name.empty();
-        use_exceptions = exceptions;
-        is_open = false;
-        file_mode = FileMode::OPEN_IN_ACTION;
-        read_write_mode = ReadWriteMode::DONE;
-        file_action = FileAction::NONE;
-        write_flags = std::ios::out | std::ios::binary | std::ios::in;
-        read_flags = std::ios_base::in;
-    }
+    File::File(const std::string &file_name, bool exceptions, const std::string &file_path)
+            : name(file_name), path(file_path), is_ready(!name.empty()), use_exceptions(exceptions), is_open(false),
+              file_mode(FileMode::OPEN_IN_ACTION), read_write_mode(ReadWriteMode::DONE), file_action(FileAction::NONE),
+              write_flags(std::ios::out | std::ios::binary | std::ios::in), read_flags(std::ios_base::in) {}
 
     File::~File() {
-        std::lock_guard<std::mutex> guard(read_write_mutex);
         close();
     }
 
@@ -33,8 +24,9 @@ namespace FilesApi {
             is_open = false;
             if (file_action != FileAction::NONE) {
                 std::cout
-                        << DesignText::make_colored("Pay attention: file mission replaced by another one. (file closed)",
-                                                    DesignText::Color::RED, false) << std::endl;
+                        << DesignText::make_colored(
+                                "Pay attention: file mission replaced by another one. (file closed)",
+                                DesignText::Color::RED, false) << std::endl;
             }
         }
         file_action = new_file_action;
@@ -45,7 +37,7 @@ namespace FilesApi {
                 is_open = false;
                 if (!use_exceptions) {
                     std::cout << DesignText::make_colored("Error Opening file: " + path + name,
-                                                        DesignText::Color::RED, true) << std::endl;
+                                                          DesignText::Color::RED, true) << std::endl;
                 } else {
                     throw FileOpenException(path + name);
                 }
@@ -57,6 +49,7 @@ namespace FilesApi {
     }
 
     void File::close(bool automatic) {
+        std::lock_guard<std::mutex> guard(read_write_mutex);
         if ((!automatic) || (file_mode == FileMode::OPEN_IN_ACTION)) {
             if (is_open) {
                 file_ptr.close();
@@ -127,7 +120,7 @@ namespace FilesApi {
 
             if (!use_exceptions) {
                 std::cout << DesignText::make_colored("Pay attention: file name is empty. can't open this file.",
-                                                    DesignText::Color::RED, true) << std::endl;
+                                                      DesignText::Color::RED, true) << std::endl;
             } else {
                 throw FileNotReadyException();
             }

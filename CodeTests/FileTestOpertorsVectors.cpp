@@ -6,7 +6,7 @@
 using namespace std;
 using namespace FilesApi;
 
-int mainFileTestOpertorsVectors() {
+int main() {
     File f("../TestFiles/test_file.bin");
     vector<complex<float>> wdata = {{1, 9}, {3, 75}, {213.34, 21.4}, {153.1, 15.85}};
     vector<complex<float>> rdata(wdata.size());

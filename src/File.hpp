@@ -6,37 +6,12 @@
 #include <fstream>
 #include <vector>
 #include <boost/assert.hpp>
+#include "extentions/std_extentions.h"
+#include "FileWrappers.h"
 #include "utilities/DesignText.hpp"
 #include "utilities/Exceptions.hpp"
 
 namespace FilesApi {
-
-    /// Use in read/write for non-vectors overload operator. e.g: file >> rw_t<T>{val, 1};
-    template<typename T> struct rw_s {
-        T*          val;
-        size_t      val_size;
-
-        rw_s(T &value, size_t arr_size = 1) : val(&value), val_size(arr_size) {
-            assert(arr_size > 0);
-
-        }
-
-        rw_s(T *value, size_t arr_size = 1) : val(value), val_size(arr_size) {
-            assert(arr_size > 0);
-            assert(value != nullptr);
-        }
-    };
-
-    /// Wrapper function for creation of rw_t object, without need for specify the type after the function name
-    /// Instead of call:    f << rw_t<int>(a, size);
-    /// Call:               f << rw_soft(a, size);
-    template<typename T> rw_s<T> rw_soft(T &value, size_t arr_size = 1) {
-        return rw_s<T>(value, arr_size);
-    }
-
-    template<typename T> rw_s<T> rw_soft(T *value, size_t arr_size = 1) {
-        return rw_soft(*value, arr_size);
-    }
 
     /**
      * >> if file_mode is OPEN_IN_ACTION:
@@ -165,14 +140,23 @@ namespace FilesApi {
         void init_write_flags(std::ios_base::openmode write_flags = std::ios::out | std::ios::binary | std::ios::in);
 
         /**
-         * Read to non-vector variable
+         * Read to array variable
          * \param T - variable type
          * \param val - variable address
-         * \param data_size - in case of array- array's size.
+         * \param data_size - array's size.
          * \return this File object.
          */
         template<class T>
-        File &read(T *val, size_t data_size = 1);
+        File &read_array(T *val, size_t data_size);
+
+        /**
+         * Read to non-array variable
+         * \param T - variable type
+         * \param val - variable address
+         * \return this File object.
+         */
+        template<class T>
+        File &read(T *val);
 
         /**
          * Read to vector variable
@@ -181,18 +165,27 @@ namespace FilesApi {
          * \param data_size - vector to read into (Have to be initialize with the size of inputs' count).
          * \return this File object.
          */
-        template<class T>
-        File &read(std::vector<T> &val);
+        template<template<class T> class Container, class T>
+        File &read(Container<T> &val, size_t size);
 
         /**
-         * Write non-vector variable
+         * Write array variable
          * \tparam T - variable type
          * \param val - variable address
-         * \param data_size - in case of array- array's size.
+         * \param data_size - array's size.
          * \return this File object.
          */
         template<class T>
-        File &write(const T *val, size_t data_size = 1);
+        File &write_array(const T *val, size_t data_size);
+
+        /**
+         * Write non-array variable
+         * \tparam T - variable type
+         * \param val - variable address
+         * \return this File object.
+         */
+        template<class T>
+        File &write(const T *val);
 
         /**
          * Write vector variable
@@ -200,8 +193,8 @@ namespace FilesApi {
          * \param val - vector to write.
          * \return this File object.
          */
-        template<class T>
-        File &write(const std::vector<T> &val);
+        template<template<class T> class Container, class T>
+        File &write(const Container<T> &val, size_t size);
 
         /**
          * Read to vector
@@ -209,15 +202,14 @@ namespace FilesApi {
          * \param data - vector to read into
          * \return this File object.
          */
-        template<class T>
-        File &operator>>(std::vector<T> &data);
+        template<template<class T> class Container, class T>
+        File &operator>>(Container<T> &data);
 
         /**
-         * Read to non-vector
+         * Read to non-array
          * \tparam T - variable type
          * \param info - {
          *                  val - variable non-vector to read into
-         *                  val_size - in case of array- array's size (else leave as default 1)
          *               }
          * \return this File object
          */
@@ -225,46 +217,101 @@ namespace FilesApi {
         File &operator>>(const rw_s<T> &info);
 
         /**
+         * Read to array
+         * \tparam T - variable type
+         * \param info - {
+         *                  val - variable non-vector to read into
+         *                  val_size - array's size
+         *               }
+         * \return this File object
+         */
+        template<class T>
+        File &operator>>(const rw_s_array<T> &info);
+
+        /**
          * Write vector to file
          * \tparam T - vector type
          * \param data - vector to write
          * \return this File object
          */
-        template<class T>
-        File &operator<<(const std::vector<T> &data);
+        template<template<class T> class Container, class T>
+        File &operator<<(const Container<T> &data);
 
         /**
-         * Write non-vector to file
+         * Write non-array to file
          * \tparam T - variable type
          * \param info - {
          *                  val - variable non-vector to write
-         *                  val_size - in case of array- array's size (else leave as default 1)
          *               }
          * \return this File object
          */
         template<class T>
         File &operator<<(const rw_s<T> &info);
+
+        /**
+         * Write array to file
+         * \tparam T - variable type
+         * \param info - {
+         *                  val - variable non-vector to write
+         *                  val_size - array's size
+         *               }
+         * \return this File object
+         */
+        template<class T>
+        File &operator<<(const rw_s_array<T> &info);
     };
 
     template<class T>
-    File &File::read(T *val, const size_t data_size) {
+    File &File::read(T *val) {
         if (!is_file_ready(0)) {
             return *this;
         }
+        static_assert(std::is_trivially_copyable_v<T>);
         open(read_flags, FileAction::READ);
         std::lock_guard<std::mutex> guard(read_write_mutex);
 
-        file_ptr.read((char *) (val), sizeof(T) * data_size);
+        file_ptr.read(reinterpret_cast<char *>(val), sizeof(T));
 
         update_rwm();
         return *this;
     }
 
     template<class T>
-    File &File::write(const T *val, const size_t data_size) {
+    File &File::read_array(T *val, const size_t data_size) {
         if (!is_file_ready(0)) {
             return *this;
         }
+        static_assert(std::is_trivially_copyable_v<T>);
+        open(read_flags, FileAction::READ);
+        std::lock_guard<std::mutex> guard(read_write_mutex);
+
+        file_ptr.read(reinterpret_cast<char *>(val), sizeof(T) * data_size);
+
+        update_rwm();
+        return *this;
+    }
+
+    template<class T>
+    File &File::write(const T *val) {
+        if (!is_file_ready(0)) {
+            return *this;
+        }
+        static_assert(std::is_trivially_copyable_v<T>);
+        open(write_flags, FileAction::WRITE);
+        std::lock_guard<std::mutex> guard(read_write_mutex);
+
+        file_ptr.write(reinterpret_cast<const char *>(val), sizeof(T));
+
+        update_rwm();
+        return *this;
+    }
+
+    template<class T>
+    File &File::write_array(const T *val, const size_t data_size) {
+        if (!is_file_ready(0)) {
+            return *this;
+        }
+        static_assert(std::is_trivially_copyable_v<T>);
         open(write_flags, FileAction::WRITE);
         std::lock_guard<std::mutex> guard(read_write_mutex);
 
@@ -274,52 +321,68 @@ namespace FilesApi {
         return *this;
     }
 
-    template<class T>
-    File &File::read(std::vector<T> &val) {
+    template<template<class T> class Container, class T>
+    File &File::read(Container<T> &val, size_t size) {
         if (!is_file_ready(0)) {
             return *this;
         }
+        static_assert(std::is_trivially_copyable_v<T>);
+        static_assert(std::is_container<Container<T>>::value);
         open(read_flags, FileAction::READ);
         std::lock_guard<std::mutex> guard(read_write_mutex);
 
-        file_ptr.read(reinterpret_cast<char *>(val.data()), sizeof(T) * val.size());
+        file_ptr.read(reinterpret_cast<char *>(val.data()), sizeof(T) * size);
 
         update_rwm();
         return *this;
     }
 
-    template<typename T>
-    File &File::write(const std::vector<T> &val) {
+    template<template<class T> class Container, class T>
+    File &File::write(const Container<T> &val, size_t size) {
         if (!is_file_ready(0)) {
             return *this;
         }
+        static_assert(std::is_trivially_copyable_v<T>);
+        static_assert(std::is_container<Container<T>>::value);
         open(write_flags, FileAction::WRITE);
         std::lock_guard<std::mutex> guard(read_write_mutex);
 
-        file_ptr.write(reinterpret_cast<const char *>(val.data()), sizeof(T) * val.size());
+        file_ptr.write(reinterpret_cast<const char *>(val.data()), sizeof(T) * size);
 
         update_rwm();
         return *this;
     }
 
-    template<class T>
-    File &File::operator>>(std::vector<T> &data) {
-        return read(data);
+    template<template<class T> class Container, class T>
+    File &File::operator>>(Container<T> &data) {
+        static_assert(std::is_container<Container<T>>::value);
+        return read(data, data.size());
     }
 
     template<class T>
     File &File::operator>>(const rw_s<T> &info) {
-        return read(info.val, info.val_size);
+        return read(info.val);
     }
 
     template<class T>
-    File &File::operator<<(const std::vector<T> &data) {
-        return write(data);
+    File &File::operator>>(const rw_s_array<T> &info) {
+        return read_array(info.val, info.val_size);
+    }
+
+    template<template<class T> class Container, class T>
+    File &File::operator<<(const Container<T> &data) {
+        static_assert(std::is_container<Container<T>>::value);
+        return write(data, data.size());
     }
 
     template<class T>
     File &File::operator<<(const rw_s<T> &info) {
-        return write(info.val, info.val_size);
+        return write(info.val);
+    }
+
+    template<class T>
+    File &File::operator<<(const rw_s_array<T> &info) {
+        return write_array(info.val, info.val_size);
     }
 }
 

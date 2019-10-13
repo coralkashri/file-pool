@@ -31,7 +31,7 @@ int mainFileTestNotVector() {
 
     /// Option 2
     size_t read_buffer[elements_count / 2];
-    f.read(read_buffer, elements_count / 2);
+    f.read_array(read_buffer, elements_count / 2);
     for (size_t i = 0; i < elements_count / 2; i++) {
         cout << read_buffer[i] << " ";
     }

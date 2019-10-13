@@ -15,9 +15,9 @@ int mainFilesManagerTest() {
 
     fm.get("1").init_read_write_mode(ReadWriteMode::SINGLE_AND_DONE);
     //fm.get("1").write(wdata.data(), wdata.size()); // Use it as complex<float> array. Possible.
-    fm.get("1").write(wdata);
+    fm.get("1").write(wdata, wdata.size());
     fm.get("1").init_read_write_mode(ReadWriteMode::SINGLE_AND_DONE);
-    fm.get("1").read(rdata);
+    fm.get("1").read(rdata, rdata.size());
 
     for (size_t i = 0; i < rdata.size(); i++) {
         cout << rdata[i] << endl;

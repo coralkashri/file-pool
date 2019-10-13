@@ -22,7 +22,7 @@ int mainFileTestOpertorsNotVectors() {
 
     f.init_read_write_mode(ReadWriteMode::SINGLE_AND_DONE);
     size_t offset = 0;
-    f >> rw_soft(rdata[offset], size - offset);
+    f >> rw_soft_array(rdata[offset], size - offset);
     f.close();
 
     for (size_t i = 0; i < size; i++) {

@@ -1,5 +1,5 @@
-# FilesApi C++
-filesApi gives you an easy files collection manager, which take care for all of ifstream, ofstream issues. An easy way to read and write complex and simple structures to files in C++.
+# FilePool C++
+FilePool gives you an easy files collection manager, which take care for all of ifstream, ofstream issues. An easy way to read and write complex and simple structures to files in C++.
 
 ## OS
 This API built in linux os (ubuntu 16.04) and haven't been checked on other OS.
